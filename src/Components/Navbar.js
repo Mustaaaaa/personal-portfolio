@@ -11,10 +11,12 @@ function Navbar() {
                     <Link className='mt-3' to="AboutMe">Biografia</Link>
                     <Link className='mt-3' to="MyProjects">Progetti</Link>
                 </div>
-                <div className='group mt-3'>
-                <a href="https://moustafa-dev.com/contact-us" className='h-6 bg-orange-500 rounded-md w-40 flex justify-center items-center mr-20 mt-3 hover:bg-gray-950 group-hover:text-white ease-in duration-300'>
-                    Contattami
-                </a>
+                <div className='group mt-3 transition'>
+                    <a href="https://moustafa-dev.com/contact-us"
+                        className='h-8 bg-orange-500 rounded-2xl w-40 flex justify-center items-center 
+                    mr-20 mt-3 hover:bg-gray-950 group-hover:text-white duration-300  animate-pulse'>
+                        Contattami
+                    </a>
                 </div>
             </div>
         </nav>
