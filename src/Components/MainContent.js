@@ -1,38 +1,60 @@
 import ScrollFunction from './Assets/scrollFunction.js';
-import React, { useRef } from 'react';
+import ScrollTop from './Assets/ScrollTop.js';
+import React, { useRef, useEffect } from 'react';
+import '../App.css';
 import imgDashboardFooder from '../Assets/fooder/fooder-dashboard-buisness.png';
 import imgFronendFooder from '../Assets/fooder/sito front end.png';
 import imgItemsGameCreator from '../Assets/gamecreator/items-gamecreator.png';
 import imgHomeGameCreator from '../Assets/gamecreator/home-gamecreator.png';
 import imgCharacterGameCreator from '../Assets/gamecreator/character-gamecreator.png';
+import imgProjectsLaravelAuth from '../Assets/laravel-auth/Projects.png';
+import imgTechnologiesLaravelAuth from '../Assets/laravel-auth/technologies.png';
+import imgTypesLaravelAuth from '../Assets/laravel-auth/types.png';
+import imgFullProjectChess from '../Assets/chessacademy/fullproject.png';
+import imgMainPageProjectChess from '../Assets/chessacademy/mainpage.png';
+import { useScroll } from './Assets/ScrollDisable.js';
+
 
 
 function MainContent() {
-    const section0Ref = useRef(null);
     const section1Ref = useRef(null);
     const section2Ref = useRef(null);
     const section3Ref = useRef(null);
     const section4Ref = useRef(null);
-    const section5Ref = useRef(null);
 
     const handleClick = (sectionRef) => {
         ScrollFunction(sectionRef);
     };
+    const { setScrollDisabled } = useScroll();
+
+    useEffect(() => {
+        setScrollDisabled(true);
+
+        return () => {
+            setScrollDisabled(false);
+        };
+    }, [setScrollDisabled]);
     return (
-        //introduzione
-        <div ref={section0Ref} className="flex justify-center flex-col">
-            <div className=" h-[calc(1325px)] flex flex-col">
-                <div className="flex flex-row justify-center items-center mt-20">
+
+        <div className="flex justify-center flex-col scrollbar-hidden overflow-hidden">
+            {/*introduzione*/}
+            <div className="lg:h-[calc(100vh-56px)] flex flex-col">
+                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                    <button onClick={() => handleClick(section1Ref)} className='button-hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
+                        &#129123;
+                    </button>
+                </div>
+                <div className="flex flex-col md:flex-row justify-center items-center mt-0 text-center md:text-left">
                     <div>
-                        <p className="text-8xl">Moustafa</p>
-                        <p className="text-8xl pl-64">Ibrahim</p>
-                        <p className="text-3xl ml-20">Jr. Full-Stack Web Developer</p>
+                        <p className="text-4xl md:text-8xl">Moustafa</p>
+                        <p className="text-4xl md:text-8xl pl-0 md:pl-64">Ibrahim</p>
+                        <p className="text-xl md:text-3xl ml-0 md:ml-20">Jr. Full-Stack Web Developer</p>
                     </div>
                 </div>
-                <div className="flex flex-grow mt-40">
-                    <img className="w-40 mt-3 ml-20" alt='logo' />
+                <div className="flex flex-grow justify-center items-center ">
+                    <img src={imgDashboardFooder} className="lg:max-w-[1340px] h-auto md:w-4/6" alt='imgDashboard' />
                 </div>
-                <div className="flex flex-row justify-center">
+                <div className="flex flex-row justify-center mb-20 flex-wrap">
                     <a href="https://html.spec.whatwg.org/" class="p-3 border-800 hover:scale-150 duration-300 group">
                         <span class="absolute bottom-full left-1/2 -translate-x-1/2 text-white bg-black rounded-md p-2 text-xs opacity-0 group-hover:opacity-100 duration-300">HTML</span>
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" class="text-4xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -75,6 +97,24 @@ function MainContent() {
                             <path d="M356.9 64.3H280l-56 88.6-48-88.6H0L224 448 448 64.3h-91.1zm-301.2 32h53.8L224 294.5 338.4 96.3h53.8L224 384.5 55.7 96.3z"></path>
                         </svg>
                     </a>
+                    <a href="https://vitejs.dev/" class="p-3 border-800 hover:scale-150 duration-300 group">
+                        <span class="absolute bottom-full left-1/2 -translate-x-1/2 text-white bg-black rounded-md p-2 text-xs opacity-0 group-hover:opacity-100 duration-300">VITEJS</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 410 404" fill="none">
+                            <path d="M399.641 59.5246L215.643 388.545C211.844 395.338 202.084 395.378 198.228 388.618L10.5817 59.5563C6.38087 52.1896 12.6802 43.2665 21.0281 44.7586L205.223 77.6824C206.398 77.8924 207.601 77.8904 208.776 77.6763L389.119 44.8058C397.439 43.2894 403.768 52.1434 399.641 59.5246Z" fill="url(#paint0_linear)" />
+                            <path d="M292.965 1.5744L156.801 28.2552C154.563 28.6937 152.906 30.5903 152.771 32.8664L144.395 174.33C144.198 177.662 147.258 180.248 150.51 179.498L188.42 170.749C191.967 169.931 195.172 173.055 194.443 176.622L183.18 231.775C182.422 235.487 185.907 238.661 189.532 237.56L212.947 230.446C216.577 229.344 220.065 232.527 219.297 236.242L201.398 322.875C200.278 328.294 207.486 331.249 210.492 326.603L212.5 323.5L323.454 102.072C325.312 98.3645 322.108 94.137 318.036 94.9228L279.014 102.454C275.347 103.161 272.227 99.746 273.262 96.1583L298.731 7.86689C299.767 4.27314 296.636 0.855181 292.965 1.5744Z" fill="url(#paint1_linear)" />
+                            <defs>
+                                <linearGradient id="paint0_linear" x1="6.00017" y1="32.9999" x2="235" y2="344" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#41D1FF" />
+                                    <stop offset="1" stop-color="#BD34FE" />
+                                </linearGradient>
+                                <linearGradient id="paint1_linear" x1="194.651" y1="8.81818" x2="236.076" y2="292.989" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFEA83" />
+                                    <stop offset="0.0833333" stop-color="#FFDD35" />
+                                    <stop offset="1" stop-color="#FFA800" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </a>
                     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="p-3 border-800 hover:scale-150 duration-300 group">
                         <span class="absolute bottom-full left-1/2 -translate-x-1/2 text-white bg-black rounded-md p-2 text-xs opacity-0 group-hover:opacity-100 duration-300">JAVASCRIPT</span>
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="text-4xl text-yellow-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -100,76 +140,104 @@ function MainContent() {
                         </svg>
                     </a>
                 </div>
-                <div className='flex justify-center mt-8 mb-20'>
-                    <button onClick={() => handleClick(section1Ref)} className='border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-3xl text-2xl animate-bounce text-white'>&#129123;</button>
-                </div>
+
             </div>
 
             {/* anteprima primo progetto fooder*/}
-            <div ref={section1Ref} className="container h-[calc(1305px)] mx-auto">
-                <div className="flex justify-center mt-3">
-                    <button onClick={() => handleClick(section0Ref)} className='border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-3xl text-2xl animate-bounce text-white'>&#129121;</button>
-                </div>
-                <div className='flex flex-row'>
-                    <div>
-                        <p className='text-8xl pt-60'>Fooder</p>
-                        <p className='text-md'>ytyrujyt yrue  yeuyrt uytt itu</p>
-                        <img src={imgDashboardFooder} className="max-w-[calc(770px)] pr-5" alt='imgDashboard' />
-                    </div>
-                    <img className='max-h-[calc(1190px)] p-5' src={imgFronendFooder} alt='imgFronend' />
-                </div>
-                <div className="flex justify-center mt-5">
-                    <button onClick={() => handleClick(section2Ref)} className='border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-3xl text-2xl animate-bounce text-white'>&#129123;</button>
+            <div ref={section1Ref} className="container lg:h-screen mx-auto relative flex  items-center justify-center">
+                <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
+                    <button onClick={ScrollTop} className='button-hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
+                        &#129121;
+                    </button>
                 </div>
 
+                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                    <button onClick={() => handleClick(section2Ref)} className='button-hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
+                        &#129123;
+                    </button>
+                </div>
+
+                <div className='flex flex-col items-center lg:flex-row'>
+                    <div className=' md:w-2/6 flex items-center justify-center flex-col'>
+                        <p className='text-4xl md:text-7xl'>Fooder</p>
+                        <p className='text-sm md:text-md text-center md:text-left'>ytyrujyt yrue  yeuyrt uytt itu</p>
+                    </div>
+                    <div className='md:w-4/6 flex justify-center'>
+                        <img src={imgDashboardFooder} className="max-w-full" alt='imgDashboard' />
+                    </div>
+                </div>
             </div>
 
             {/* anteprima primo progetto gamecreator*/}
-            <div ref={section2Ref} className="container h-[calc(1440px)] mx-auto">
-
-                <div className="flex justify-center mt-4 mb-5">
-                    <button onClick={() => handleClick(section1Ref)} className='border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-3xl text-2xl animate-bounce text-white'>&#129121;</button>
+            <div ref={section2Ref} className="container lg:h-screen mx-auto relative flex  items-center justify-center">
+                <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
+                    <button onClick={() => handleClick(section1Ref)} className='button-hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
+                        &#129121;
+                    </button>
                 </div>
-                <div className='flex flex-row'>
-                    <div>
-                        <p className='text-8xl pt-60'>GameCreator</p>
-                        <p className='text-md flex'>ytyrujyt yrue  yeuyrt uytt itu</p>
-                        <img src={imgHomeGameCreator} className="max-w-[calc(770px)] mr-5" alt='imgDashboard' />
+                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                    <button onClick={() => handleClick(section3Ref)} className='button-hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
+                        &#129123;
+                    </button>
+                </div>
+                <div className="flex flex-col  items-center lg:flex-row">
+                    <div className=" lg:w-2/6 flex items-center  justify-center flex-col">
+                        <p className='text-4xl md:text-7xl  break-all'>GameCreator</p>
+                        <p className='text-sm md:text-md text-center md:text-left'>ytyrujyt yrue  yeuyrt uytt itu</p>
                     </div>
-                    <div>
-                        <img src={imgItemsGameCreator} className="max-w-[calc(770px)] ml-5 pb-10" alt='imgDashboard' />
-                        <img className='max-w-[calc(770px)] ml-5 pt-10' src={imgCharacterGameCreator} alt='imgFronend' />
+                    <div className="lg:w-4/6 flex justify-center">
+                        <img src={imgHomeGameCreator} className="max-w-full" alt='imgDashboard' />
                     </div>
                 </div>
-                <div className="flex justify-center mt-10 pt-4">
-                    <button onClick={() => handleClick(section3Ref)} className='border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-3xl text-2xl animate-bounce text-white'>&#129123;</button>
+            </div>
+
+            {/* anteprima primo progetto Laravel-auth*/}
+            <div ref={section3Ref} className="container lg:h-screen mx-auto relative flex items-center justify-center">
+
+                <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
+                    <button onClick={() => handleClick(section2Ref)} className='button-hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
+                        &#129121;
+                    </button>
                 </div>
 
+                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                    <button onClick={() => handleClick(section4Ref)} className='button-hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
+                        &#129123;
+                    </button>
+                </div>
+
+                <div className='flex flex-col items-center lg:flex-row'>
+                    <div className=" lg:w-2/6 flex items-center  justify-center flex-col">
+                        <p className='text-4xl md:text-7xl'>Laravel-auth</p>
+                        <p className='text-sm md:text-md text-start'>ytyrujyt yrue  yeuyrt uytt itu</p>
+                    </div>
+
+                    <div className="lg:w-4/6 flex justify-center">
+                        <img src={imgProjectsLaravelAuth} className="max-w-full" alt='imgDashboard' />
+                    </div>
+                </div>
             </div>
 
-            {/* anteprima primo progetto deliveboo*/}
-            <div ref={section3Ref} className=" h-screen bg-white-500 justify-center">
-                <button onClick={() => handleClick(section2Ref)} className='border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-3xl text-2xl animate-bounce text-white'>&#129121;</button>
+            {/* anteprima primo progetto Chess Academy*/}
 
-                <button onClick={() => handleClick(section4Ref)} className='border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-3xl text-2xl animate-bounce text-white'>&#129123;</button>
+            <div ref={section4Ref} className="container lg:h-screen mx-auto relative flex items-center justify-center">
+                <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
+                    <button onClick={() => handleClick(section3Ref)} className='button-hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
+                        &#129121;
+                    </button>
+                </div>
 
+                <div className='flex flex-col items-center lg:flex-row'>
+                    <div className=' lg:w-2/6 flex items-center justify-center flex-col'>
+                        <p className='text-4xl md:text-7xl '>Chess Academy</p>
+                        <p className='text-sm md:text-md'>ytyrujyt yrue  yeuyrt uytt itu</p>
+                    </div>
+                    <div className='lg:w-4/6 flex justify-center'>
+                        <img src={imgMainPageProjectChess} className="max-w-full" alt='imgDashboard' />
+                    </div>
+                </div>
             </div>
-
-            {/* anteprima primo progetto deliveboo*/}
-            <div ref={section4Ref} className=" h-screen bg-orange-500 justify-center">
-                <button onClick={() => handleClick(section3Ref)} className='border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-3xl text-2xl animate-bounce text-white'>&#129121;</button>
-
-                <button onClick={() => handleClick(section5Ref)} className='border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-3xl text-2xl animate-bounce text-white'>&#129123;</button>
-
-            </div>
-
-            {/* anteprima primo progetto deliveboo*/}
-            <div ref={section5Ref} className=" h-screen bg-violet-500 justify-center">
-                <button onClick={() => handleClick(section4Ref)} className='border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-3xl text-2xl animate-bounce text-white'>&#129121;</button>
-
-
-            </div>
-        </div >
+        </div>
     );
 }
 
