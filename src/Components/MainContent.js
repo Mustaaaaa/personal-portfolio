@@ -48,7 +48,7 @@ function MainContent() {
                 <div className="flex flex-grow justify-center items-center ">
                     <img src={imgDashboardFooder} className="lg:max-w-[1340px] h-auto md:w-4/6" alt='imgDashboard' />
                 </div>
-                <div className="flex flex-row justify-center mb-20 flex-wrap">
+                <div className="flex flex-row justify-center lg:mb-20 flex-wrap">
                     <a href="https://html.spec.whatwg.org/" class="p-3 border-800 hover:scale-150 duration-300 group">
                         <span class="absolute bottom-full left-1/2 -translate-x-1/2 text-white bg-black rounded-md p-2 text-xs opacity-0 group-hover:opacity-100 duration-300">HTML</span>
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" class="text-4xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -138,7 +138,7 @@ function MainContent() {
             </div>
 
             {/* anteprima primo progetto fooder*/}
-            <div ref={section1Ref} className="container lg:h-screen mx-auto relative flex  items-center justify-center">
+            <div ref={section1Ref} className="container lg:h-screen mx-auto relative flex  items-center justify-center pt-20 lg:pt-0">
                 <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
                     <button onClick={ScrollTop} className='button-hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
                         &#129121;
@@ -152,18 +152,18 @@ function MainContent() {
                 </div>
 
                 <div className='flex flex-col items-center lg:flex-row'>
-                    <div className=' md:w-2/6 flex items-center justify-center flex-col'>
-                        <p className='text-4xl md:text-7xl'>Fooder</p>
-                        <p className='text-sm md:text-md text-center md:text-left'>ytyrujyt yrue  yeuyrt uytt itu</p>
+                    <div className=' w-full lg:w-2/6 flex flex-col'>
+                        <p className='text-4xl md:text-7xl pr-5'>Fooder</p>
+                        <p className='text-md md:text-md py-5 pr-5'>Fooder è una web app per ordinare cibo a domicilio, sviluppata come progetto finale in team presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Il frontend è realizzato con Vue.js per un'interfaccia utente dinamica, mentre il backend utilizza Laravel per una gestione affidabile e sicura. Questo progetto full-stack dimostra le competenze tecniche e pratiche acquisite durante lo svolgimento del corso.</p>
                     </div>
-                    <div className='md:w-4/6 flex justify-center'>
+                    <div className='w-full lg:w-4/6'>
                         <img src={imgDashboardFooder} className="max-w-full" alt='imgDashboard' />
                     </div>
                 </div>
             </div>
 
             {/* anteprima primo progetto gamecreator*/}
-            <div ref={section2Ref} className="container lg:h-screen mx-auto relative flex  items-center justify-center">
+            <div ref={section2Ref} className="container lg:h-screen mx-auto relative flex  items-center justify-center pt-20 lg:pt-0">
                 <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
                     <button onClick={() => handleClick(section1Ref)} className='button-hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
                         &#129121;
@@ -175,18 +175,18 @@ function MainContent() {
                     </button>
                 </div>
                 <div className="flex flex-col  items-center lg:flex-row">
-                    <div className=" lg:w-2/6 flex items-center  justify-center flex-col">
-                        <p className='text-4xl md:text-7xl  break-all'>GameCreator</p>
-                        <p className='text-sm md:text-md text-center md:text-left'>ytyrujyt yrue  yeuyrt uytt itu</p>
+                    <div className=" w-full lg:w-2/6 flex flex-col">
+                        <p className='text-4xl md:text-7xl  break-all pr-5'>GameCreator</p>
+                        <p className='text-sm md:text-md'>ytyrujyt yrue  yeuyrt uytt itu</p>
                     </div>
-                    <div className="lg:w-4/6 flex justify-center">
+                    <div className="w-full lg:w-4/6">
                         <img src={imgHomeGameCreator} className="max-w-full" alt='imgDashboard' />
                     </div>
                 </div>
             </div>
 
             {/* anteprima primo progetto Laravel-auth*/}
-            <div ref={section3Ref} className="container lg:h-screen mx-auto relative flex items-center justify-center">
+            <div ref={section3Ref} className="container lg:h-screen mx-auto relative flex items-center justify-center  pt-20 lg:pt-0">
 
                 <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
                     <button onClick={() => handleClick(section2Ref)} className='button-hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
@@ -201,12 +201,12 @@ function MainContent() {
                 </div>
 
                 <div className='flex flex-col items-center lg:flex-row'>
-                    <div className=" lg:w-2/6 flex items-center  justify-center flex-col">
-                        <p className='text-4xl md:text-7xl'>Laravel-auth</p>
-                        <p className='text-sm md:text-md text-start'>ytyrujyt yrue  yeuyrt uytt itu</p>
+                    <div className="w-full lg:w-2/6 flex flex-col">
+                        <p className='text-4xl md:text-7xl pr-5'>Laravel-auth</p>
+                        <p className='text-sm md:text-md'>ytyrujyt yrue  yeuyrt uytt itu</p>
                     </div>
 
-                    <div className="lg:w-4/6 flex justify-center">
+                    <div className="w-full lg:w-4/6">
                         <img src={imgProjectsLaravelAuth} className="max-w-full" alt='imgDashboard' />
                     </div>
                 </div>
@@ -214,7 +214,7 @@ function MainContent() {
 
             {/* anteprima primo progetto Chess Academy*/}
 
-            <div ref={section4Ref} className="container lg:h-screen mx-auto relative flex items-center justify-center">
+            <div ref={section4Ref} className="container lg:h-screen mx-auto relative flex items-center justify-center  pt-20 lg:pt-0">
                 <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
                     <button onClick={() => handleClick(section3Ref)} className='button-hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
                         &#129121;
@@ -222,16 +222,16 @@ function MainContent() {
                 </div>
 
                 <div className='flex flex-col items-center lg:flex-row'>
-                    <div className=' lg:w-2/6 flex items-center justify-center flex-col'>
-                        <p className='text-4xl md:text-7xl '>Chess Academy</p>
+                    <div className='w-full lg:w-2/6 flex flex-col'>
+                        <p className='text-4xl md:text-7xl pr-5'>Chess Academy</p>
                         <p className='text-sm md:text-md'>ytyrujyt yrue  yeuyrt uytt itu</p>
                     </div>
-                    <div className='lg:w-4/6 flex justify-center'>
+                    <div className='w-full lg:w-4/6'>
                         <img src={imgMainPageProjectChess} className="max-w-full" alt='imgDashboard' />
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
