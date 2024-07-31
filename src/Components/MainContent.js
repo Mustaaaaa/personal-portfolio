@@ -3,14 +3,8 @@ import ScrollTop from './Assets/ScrollTop.js';
 import React, { useRef, useEffect } from 'react';
 import '../App.css';
 import imgDashboardFooder from '../Assets/fooder/fooder-dashboard-buisness.png';
-import imgFronendFooder from '../Assets/fooder/sito front end.png';
-import imgItemsGameCreator from '../Assets/gamecreator/items-gamecreator.png';
 import imgHomeGameCreator from '../Assets/gamecreator/home-gamecreator.png';
-import imgCharacterGameCreator from '../Assets/gamecreator/character-gamecreator.png';
 import imgProjectsLaravelAuth from '../Assets/laravel-auth/Projects.png';
-import imgTechnologiesLaravelAuth from '../Assets/laravel-auth/technologies.png';
-import imgTypesLaravelAuth from '../Assets/laravel-auth/types.png';
-import imgFullProjectChess from '../Assets/chessacademy/fullproject.png';
 import imgMainPageProjectChess from '../Assets/chessacademy/mainpage.png';
 import { useScroll } from './Assets/ScrollDisable.js';
 
