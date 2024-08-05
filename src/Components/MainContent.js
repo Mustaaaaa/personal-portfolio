@@ -151,10 +151,10 @@ function MainContent() {
                     </button>
                 </div>
 
-                <div className='flex flex-cl items-center lg:flex-row flex-grow'>
-                    <div className=' w-full lg:w-2/6 flex flex-col'>
-                        <p className='text-4xl md:text-7xl pr-5'>Fooder</p>
-                        <p className='text-md md:text-md py-5 pr-5'>Fooder è una web app per ordinare cibo a domicilio, sviluppata come progetto finale in team presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Il frontend è realizzato con Vue.js per un'interfaccia utente dinamica, mentre il backend utilizza Laravel per una gestione affidabile e sicura. Questo progetto full-stack dimostra le competenze tecniche e pratiche acquisite durante lo svolgimento del corso.</p>
+                <div className='flex flex-col items-center lg:flex-row flex-grow'>
+                    <div className=' w-full lg:w-2/6 flex flex-col px-5'>
+                        <p className='text-4xl md:text-7xl'>Fooder</p>
+                        <p className='text-md md:text-md py-5'>Fooder è una web app per ordinare cibo a domicilio, sviluppata come progetto finale in team presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Il frontend è realizzato con Vue.js per un'interfaccia utente dinamica, mentre il backend utilizza Laravel per una gestione affidabile e sicura. Questo progetto full-stack dimostra le competenze tecniche e pratiche acquisite durante lo svolgimento del corso.</p>
                     </div>
                     <div className='w-11/12 lg:w-4/6'>
                         <img src={imgDashboardFooder} className="max-w-full" alt='imgDashboard' />
@@ -175,9 +175,9 @@ function MainContent() {
                     </button>
                 </div>
                 <div className="flex flex-col  items-center lg:flex-row">
-                    <div className=" w-full lg:w-2/6 flex flex-col">
-                        <p className='text-4xl md:text-7xl  break-all py-5 pr-5'>GameCreator</p>
-                        <p className='text-sm md:text-md'>GameCreator è una web app per la creazione di personaggi stile Dungeons & Dragons, sviluppata in team presso Boolean. Utilizza Laravel per la creazione del backend. Questo progetto dimostra le competenze nel backend acquisite durante il corso, inclusa l'autenticazione degli utenti e la gestione dei dati di del personaggio creato o già esistente.</p>
+                    <div className=" w-full lg:w-2/6 flex flex-col px-5">
+                        <p className='text-4xl md:text-7xl  break-all'>GameCreator</p>
+                        <p className='text-sm md:text-md py-5'>GameCreator è una web app per la creazione di personaggi stile Dungeons & Dragons, sviluppata in team presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Utilizza Laravel per la creazione del backend. Questo progetto dimostra le competenze nel backend acquisite durante il corso, inclusa l'autenticazione degli utenti e la gestione dei dati di del personaggio creato o già esistente.</p>
                     </div>
                     <div className="w-11/12 lg:w-4/6">
                         <img src={imgHomeGameCreator} className="max-w-full" alt='imgDashboard' />
@@ -201,9 +201,9 @@ function MainContent() {
                 </div>
 
                 <div className="flex flex-col items-center lg:flex-row">
-                    <div className="w-full lg:w-2/6 flex flex-col">
-                        <p className="text-4xl md:text-7xl pr-5">Laravel-auth</p>
-                        <p className="text-sm md:text-md py-5 pr-5">Laravel-Auth è una web app per la pubblicazione dei progetti di ogni tipo e il salvataggio nel database per poi essere riportati in un progetto Front-end(non ancora sviluppato), sviluppata interamente in solitario presso Boolean. Utilizza Laravel per il backend e include un sistema di autenticazione degli utenti sviluppato autonomamente. Questo progetto evidenzia le competenze nel backend development acquisite durante il corso.</p>
+                    <div className="w-full lg:w-2/6 flex flex-col px-5">
+                        <p className="text-4xl md:text-7xl">Laravel-auth</p>
+                        <p className="text-sm md:text-md py-5">Laravel-Auth è una web app per la pubblicazione dei progetti di ogni tipo e il salvataggio nel database per poi essere riportati in un progetto Front-end(non ancora sviluppato), sviluppata interamente in solitario presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Utilizza Laravel per il backend e include un sistema di autenticazione degli utenti sviluppato autonomamente. Questo progetto evidenzia le competenze nel backend development acquisite durante il corso.</p>
                     </div>
 
                     <div className="w-11/12 lg:w-4/6">
@@ -222,9 +222,9 @@ function MainContent() {
                 </div>
 
                 <div className="flex flex-col items-center lg:flex-row">
-                    <div className="w-full lg:w-2/6 flex flex-col">
-                        <p className="text-4xl md:text-7xl pr-5">Chess Academy</p>
-                        <p className="text-sm md:text-md py-5 pr-5">Chess Academy è stato il progetto midterm presso Boolean, sviluppato interamente con Vue.js. Questa web app sfrutta le potenzialità di Vue.js per garantire un"esperienza utente fluida e reattiva. Il progetto dimostra le competenze acquisite nel front-end durante il corso.</p>
+                    <div className="w-full lg:w-2/6 flex flex-col px-5">
+                        <p className="text-4xl md:text-7xl">Chess Academy</p>
+                        <p className="text-sm md:text-md py-5">Chess Academy è stato il progetto midterm presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>, sviluppato interamente con Vue.js. Questa web app sfrutta le potenzialità di Vue.js per garantire un"esperienza utente fluida e reattiva. Il progetto dimostra le competenze acquisite nel front-end durante il corso.</p>
                     </div>
                     <div className="w-11/12 lg:w-4/6">
                         <img src={imgMainPageProjectChess} className="max-w-full" alt="imgDashboard"/>
