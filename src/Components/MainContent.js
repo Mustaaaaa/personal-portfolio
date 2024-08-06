@@ -45,7 +45,7 @@ function MainContent() {
                         <p className="text-xl md:text-3xl ml-0 md:ml-20">Jr. Full-Stack Web Developer</p>
                     </div>
                 </div>
-                <div className="flex justify-center items-center pt-20 pb-20">
+                <div className="flex justify-center items-center pt-20 md:pb-20">
                     <img src={imgDashboardFooder} className="max-w-full md:w-[512px]" alt='imgDashboard' />
                 </div>
                 <div className="flex flex-row justify-center lg:mb-0 flex-wrap relative">
