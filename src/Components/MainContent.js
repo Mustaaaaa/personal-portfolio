@@ -46,7 +46,7 @@ function MainContent() {
                     </div>
                 </div>
                 <div className="flex justify-center items-center pt-20 pb-20">
-                    <img src={imgDashboardFooder} className="max-w-full md:w-3/6" alt='imgDashboard' />
+                    <img src={imgDashboardFooder} className="max-w-full md:w-[512px]" alt='imgDashboard' />
                 </div>
                 <div className="flex flex-row justify-center lg:mb-0 flex-wrap relative">
                     <a href="https://html.spec.whatwg.org/" class="p-3 border-800 hover:scale-150 duration-300 group">
