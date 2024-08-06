@@ -1,9 +1,9 @@
-const scrollFunction = (sectionRef) => {
-  const navbarHeight = 64; // Altezza della navbar in px
+const scrollFunctionMobile = (sectionRef) => {
+  const navbarHeight = 64;
   window.scrollTo({
       top: sectionRef.current.offsetTop + navbarHeight,
       behavior: 'smooth'
   });
 };
 
-export default scrollFunction;
+export default scrollFunctionMobile;

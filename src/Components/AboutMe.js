@@ -7,7 +7,6 @@ import imgPersonal from '../Assets/abotMe/personalImage.png';
 import { useScroll } from './Assets/ScrollDisable.js';
 function AboutMe() {
     const section1Ref = useRef(null);
-    const section2Ref = useRef(null);
     const sectionDescriptionRef = useRef(null);
     const sectionExperienceRef = useRef(null);
     const sectionImgRef = useRef(null);
@@ -36,7 +35,7 @@ function AboutMe() {
             {/* anteprima primo progetto fooder*/}
             <div className="container min-h-[calc(100vh-56px)] d:min-h-0 mx-auto relative flex items-center justify-center lg:pt-20 md:pt-5">
                 <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2">
-                    <button onClick={() => handleClickMobile(section1Ref)} className='button-hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
+                    <button onClick={() => handleClickMobile(section1Ref)} className='hidden md:block border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
                         &#129123;
                     </button>
                 </div>
@@ -95,65 +94,75 @@ function AboutMe() {
             </div>
 
             {/* anteprima primo progetto fooder*/}
-            < div ref={section2Ref} className="container min-h-screen d:min-h-0 mx-auto relative flex items-center justify-center lg:pt-20 lg:pt-0" >
-                <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
-                    <button onClick={ScrollTop} className='button-hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
+            {/* Scroll to Top Button */}
+
+            <div ref={section1Ref} className='container min-h-screen mx-auto md:relative flex flex-col items-center justify-center lg:pt-20 md:pt-5'>
+                <div className="hidden md:block absolute top-4 left-1/2 transform -translate-x-1/2">
+                    <button onClick={ScrollTop} className='border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
                         &#129121;
                     </button>
                 </div>
-
-                <div className='flex flex-col items-center flex-grow'>
-
-                    <div ref={sectionExperienceRef} className='container w-full lg:w-2/6 flex flex-col justify-center p-5 h-screen md:h-auto relative'>
-                        <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
-                            <button onClick={() => handleClickMobile(sectionDescriptionRef)} className='md:hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
-                                &#129121;
-                            </button>
-                        </div>
-                        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
-                            <button onClick={() => handleClick(sectionStartFutureRef)} className='md:hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
-                                &#129123;
-                            </button>
-                        </div>
-                        <p className='text-3xl'>Le prime esperienze lavorative</p>
-                        <p className='text-md py-5'>Il settore turistico, nonostante la mia formazione, non risuonava con le mie aspirazioni. Così, ho iniziato a esplorare diverse opportunità:
-                            <br></br>
-                            1)<strong> L'azienda edile di famiglia</strong> : Un'esperienza che mi ha insegnato il valore del lavoro duro, ma che ho dovuto abbandonare a causa di allergie.
-                            <br></br>
-                            2)<strong> Magazziniere</strong>: Un ruolo che mi ha permesso di crescere rapidamente, diventando capoturno in soli 12 mesi. Eppure, sentivo che mancava qualcosa...</p>
+                {/* Experience Section */}
+                <div ref={sectionExperienceRef} className='container w-full lg:w-4/6 flex flex-col justify-center p-5 h-screen md:h-auto relative'>
+                    {/* Scroll to Description Button */}
+                    <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
+                        <button onClick={() => handleClickMobile(sectionDescriptionRef)} className='md:hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
+                            &#129121;
+                        </button>
                     </div>
-
-                    <div ref={sectionStartFutureRef} className='container w-full lg:w-2/6 flex flex-col justify-center p-5 h-screen md:h-auto relative'>
-                        <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
-                            <button onClick={() => handleClickMobile(sectionExperienceRef)} className='md:hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
-                                &#129121;
-                            </button>
-                        </div>
-                        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
-                            <button onClick={() => handleClick(sectionWebDeveloperRef)} className='md:hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
-                                &#129123;
-                            </button>
-                        </div>
-                        <p className='text-3xl'>La scintilla che ha dato inizio al mio percorso</p>
-                        <p className='text-md py-5'>Fu durante una riflessione sul mio percorso che un ricordo venne a galla.
-                            Mi tornò in mente un progetto scolastico in cui mi ero impegnato molto in <strong>HTML</strong>  e <strong>CSS</strong>
-                            che mi aveva fatto guadagnare l'unico 10 in cinque anni di superiori.
-                            Quella scintilla di entusiasmo che avevo provato allora si riaccese, indicandomi la strada da seguire.</p>
+                    {/* Scroll to Start Future Section Button */}
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
+                        <button onClick={() => handleClick(sectionStartFutureRef)} className='md:hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
+                            &#129123;
+                        </button>
                     </div>
-
-                    <div ref={sectionWebDeveloperRef} className='container w-full lg:w-2/6 flex flex-col justify-center p-5 h-screen md:h-auto relative'>
-                        <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
-                            <button onClick={() => handleClickMobile(sectionStartFutureRef)} className='md:hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
-                                &#129121;
-                            </button>
-                        </div>
-                        <p className='text-3xl'>Il salto nel mondo dello sviluppo web</p>
-                        <p className='text-md py-5'>Così ho deciso di seguire questa nuova direzione, mi sono iscritto al corso di Boolean.
-                            È stato qui che ho realizzato che lo sviluppo web non era solo una nuova carriera,
-                            ma la realizzazione di un sogno che avevo da ragazzino, anche se solo ora ne ero pienamente consapevole.</p>
-                    </div>
+                    <p className='text-3xl'>Le prime esperienze lavorative</p>
+                    <p className='text-md py-5'>
+                        Il settore turistico, nonostante la mia formazione, non risuonava con le mie aspirazioni. Così, ho iniziato a esplorare diverse opportunità:
+                        <br />
+                        <strong>1) L'azienda edile di famiglia</strong>: Un'esperienza che mi ha insegnato il valore del lavoro duro, ma che ho dovuto abbandonare a causa di allergie.
+                        <br />
+                        <strong>2) Magazziniere</strong>: Un ruolo che mi ha permesso di crescere rapidamente, diventando capoturno in soli 12 mesi. Eppure, sentivo che mancava qualcosa...
+                    </p>
                 </div>
-            </div >
+
+                {/* Start Future Section */}
+                <div ref={sectionStartFutureRef} className='container w-full lg:w-4/6 flex flex-col justify-center p-5 h-screen md:h-auto relative'>
+                    {/* Scroll to Description Button */}
+                    <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
+                        <button onClick={() => handleClick(sectionExperienceRef)} className='md:hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
+                            &#129121;
+                        </button>
+                    </div>
+                    {/* Scroll to Experience Section Button */}
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
+                        <button onClick={() => handleClick(sectionWebDeveloperRef)} className='md:hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
+                            &#129123;
+                        </button>
+                    </div>
+                    <p className='text-3xl'>La scintilla che ha dato inizio al mio percorso</p>
+                    <p className='text-md py-5'>
+                        Fu durante una riflessione sul mio percorso che un ricordo venne a galla. Mi tornò in mente un progetto scolastico in cui mi ero impegnato molto in <strong>HTML</strong> e <strong>CSS</strong>
+                        che mi aveva fatto guadagnare l'unico 10 in cinque anni di superiori. Quella scintilla di entusiasmo che avevo provato allora si riaccese, indicandomi la strada da seguire.
+                    </p>
+                </div>
+
+                {/* Web Development Journey Section */}
+                <div ref={sectionWebDeveloperRef} className='container w-full lg:w-4/6 flex flex-col justify-center p-5 h-screen md:h-auto relative'>
+                    <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
+                        <button onClick={() => handleClick(sectionStartFutureRef)} className='md:hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
+                            &#129121;
+                        </button>
+                    </div>
+
+                    <p className='text-3xl'>Il salto nel mondo dello sviluppo web</p>
+                    <p className='text-md py-5'>
+                        Così ho deciso di seguire questa nuova direzione, mi sono iscritto al corso di Boolean. È stato qui che ho realizzato che lo sviluppo web non era solo una nuova carriera,
+                        ma la realizzazione di un sogno che avevo da ragazzino, anche se solo ora ne ero pienamente consapevole.
+                    </p>
+                </div>
+            </div>
+
         </div>
     );
 };
