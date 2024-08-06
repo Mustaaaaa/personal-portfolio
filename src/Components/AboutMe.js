@@ -32,7 +32,6 @@ function AboutMe() {
     }, [setScrollDisabled]);
     return (
         <div className="flex justify-center flex-col">
-            {/* anteprima primo progetto fooder*/}
             <div className="container min-h-[calc(100vh-56px)] d:min-h-0 mx-auto relative flex items-center justify-center lg:pt-20 md:pt-5">
                 <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2">
                     <button onClick={() => handleClickMobile(section1Ref)} className='hidden md:block border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
@@ -93,8 +92,7 @@ function AboutMe() {
                 </div>
             </div>
 
-            {/* anteprima primo progetto fooder*/}
-            {/* Scroll to Top Button */}
+
 
             <div ref={section1Ref} className='container min-h-screen mx-auto md:relative flex flex-col items-center justify-center lg:pt-20 md:pt-5'>
                 <div className="hidden md:block absolute top-4 left-1/2 transform -translate-x-1/2">
@@ -102,15 +100,12 @@ function AboutMe() {
                         &#129121;
                     </button>
                 </div>
-                {/* Experience Section */}
                 <div ref={sectionExperienceRef} className='container w-full lg:w-4/6 flex flex-col justify-center p-5 h-screen md:h-auto relative'>
-                    {/* Scroll to Description Button */}
                     <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
                         <button onClick={() => handleClickMobile(sectionDescriptionRef)} className='md:hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
                             &#129121;
                         </button>
                     </div>
-                    {/* Scroll to Start Future Section Button */}
                     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
                         <button onClick={() => handleClick(sectionStartFutureRef)} className='md:hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
                             &#129123;
@@ -126,15 +121,12 @@ function AboutMe() {
                     </p>
                 </div>
 
-                {/* Start Future Section */}
                 <div ref={sectionStartFutureRef} className='container w-full lg:w-4/6 flex flex-col justify-center p-5 h-screen md:h-auto relative'>
-                    {/* Scroll to Description Button */}
                     <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
                         <button onClick={() => handleClick(sectionExperienceRef)} className='md:hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
                             &#129121;
                         </button>
                     </div>
-                    {/* Scroll to Experience Section Button */}
                     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
                         <button onClick={() => handleClick(sectionWebDeveloperRef)} className='md:hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
                             &#129123;
@@ -147,7 +139,6 @@ function AboutMe() {
                     </p>
                 </div>
 
-                {/* Web Development Journey Section */}
                 <div ref={sectionWebDeveloperRef} className='container w-full lg:w-4/6 flex flex-col justify-center p-5 h-screen md:h-auto relative'>
                     <div className="absolute top-3 left-1/2 transform -translate-x-1/2">
                         <button onClick={() => handleClick(sectionStartFutureRef)} className='md:hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white'>
