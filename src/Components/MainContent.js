@@ -32,7 +32,7 @@ function MainContent() {
 
         <div className="flex justify-center flex-col">
             {/*introduzione*/}
-            <div className="min-h-[calc(100vh-56px)] container mx-auto relative flex flex-col items-center justify-center lgpt-20 lg:pt-0">
+            <div className="min-h-[calc(100vh-56px)] container mx-auto relative flex flex-col items-center justify-center lgpt-20 lg:pt-0 ">
                 <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2">
                     <button onClick={() => handleClick(section1Ref)} className="button-hidden border-2 bg-slate-900 border-slate-950 w-10 h-10 rounded-full text-2xl animate-bounce text-white">
                         &#129123;
@@ -40,9 +40,9 @@ function MainContent() {
                 </div>
                 <div className="flex flex-col md:flex-row justify-center items-center mt-0 text-center md:text-left">
                     <div className="hover:text-orange-500">
-                        <p className="text-4xl md:text-8xl">Moustafa</p>
-                        <p className="text-4xl md:text-8xl pl-0 md:pl-64">Ibrahim</p>
-                        <p className="text-xl md:text-3xl ml-0 md:ml-20">Jr. Full-Stack Web Developer</p>
+                        <p className="text-4xl md:text-8xl break-all">Moustafa</p>
+                        <p className="text-4xl md:text-8xl pl-0 md:pl-64 break-all">Ibrahim</p>
+                        <p className="text-xl md:text-3xl ml-0 md:ml-20 break-all">Jr. Full-Stack Web Developer</p>
                     </div>
                 </div>
                 <div className="flex justify-center items-center pt-20 md:pb-20">
@@ -153,8 +153,8 @@ function MainContent() {
 
                 <div className='flex flex-col items-center lg:flex-row flex-grow'>
                     <div className=' w-full lg:w-2/6 flex flex-col px-5'>
-                        <p className='text-4xl md:text-7xl'>Fooder</p>
-                        <p className='text-md md:text-md py-5'>Fooder è una web app per ordinare cibo a domicilio, sviluppata come progetto finale in team presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Il frontend è realizzato con Vue.js per un'interfaccia utente dinamica, mentre il backend utilizza Laravel per una gestione affidabile e sicura. Questo progetto full-stack dimostra le competenze tecniche e pratiche acquisite durante lo svolgimento del corso.</p>
+                        <p className='text-4xl md:text-7xl break-all'>Fooder</p>
+                        <p className='text-md py-5 text-pretty'>Fooder è una web app per ordinare cibo a domicilio, sviluppata come progetto finale in team presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Il frontend è realizzato con Vue.js per un'interfaccia utente dinamica, mentre il backend utilizza Laravel per una gestione affidabile e sicura. Questo progetto full-stack dimostra le competenze tecniche e pratiche acquisite durante lo svolgimento del corso.</p>
                     </div>
                     <div className='w-11/12 lg:w-4/6'>
                         <img src={imgDashboardFooder} className="max-w-full" alt='imgDashboard' />
@@ -176,8 +176,8 @@ function MainContent() {
                 </div>
                 <div className="flex flex-col  items-center lg:flex-row">
                     <div className=" w-full lg:w-2/6 flex flex-col px-5">
-                        <p className='text-4xl md:text-7xl  break-all'>GameCreator</p>
-                        <p className='text-sm md:text-md py-5'>GameCreator è una web app per la creazione di personaggi stile Dungeons & Dragons, sviluppata in team presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Utilizza Laravel per la creazione del backend. Questo progetto dimostra le competenze nel backend acquisite durante il corso, inclusa l'autenticazione degli utenti e la gestione dei dati di del personaggio creato o già esistente.</p>
+                        <p className='text-4xl md:text-7xl break-all text-pretty'>GameCreator</p>
+                        <p className='text-md py-5 text-pretty'>GameCreator è una web app per la creazione di personaggi stile Dungeons & Dragons, sviluppata in team presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Utilizza Laravel per la creazione del backend. Questo progetto dimostra le competenze nel backend acquisite durante il corso, inclusa l'autenticazione degli utenti e la gestione dei dati di del personaggio creato o già esistente.</p>
                     </div>
                     <div className="w-11/12 lg:w-4/6">
                         <img src={imgHomeGameCreator} className="max-w-full" alt='imgDashboard' />
@@ -202,8 +202,8 @@ function MainContent() {
 
                 <div className="flex flex-col items-center lg:flex-row">
                     <div className="w-full lg:w-2/6 flex flex-col px-5">
-                        <p className="text-4xl md:text-7xl">Laravel-auth</p>
-                        <p className="text-sm md:text-md py-5">Laravel-Auth è una web app per la pubblicazione dei progetti di ogni tipo e il salvataggio nel database per poi essere riportati in un progetto Front-end(non ancora sviluppato), sviluppata interamente in solitario presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Utilizza Laravel per il backend e include un sistema di autenticazione degli utenti sviluppato autonomamente. Questo progetto evidenzia le competenze nel backend development acquisite durante il corso.</p>
+                        <p className="text-4xl md:text-7xl break-all text-pretty">Laravel-auth</p>
+                        <p className="text-md py-5 text-pretty">Laravel-Auth è una web app per la pubblicazione dei progetti di ogni tipo e il salvataggio nel database per poi essere riportati in un progetto Front-end(non ancora sviluppato), sviluppata interamente in solitario presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Utilizza Laravel per il backend e include un sistema di autenticazione degli utenti sviluppato autonomamente. Questo progetto evidenzia le competenze nel backend development acquisite durante il corso.</p>
                     </div>
 
                     <div className="w-11/12 lg:w-4/6">
@@ -223,8 +223,8 @@ function MainContent() {
 
                 <div className="flex flex-col items-center lg:flex-row">
                     <div className="w-full lg:w-2/6 flex flex-col px-5">
-                        <p className="text-4xl md:text-7xl">Chess Academy</p>
-                        <p className="text-sm md:text-md py-5">Chess Academy è stato il progetto midterm presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>, sviluppato interamente con Vue.js. Questa web app sfrutta le potenzialità di Vue.js per garantire un"esperienza utente fluida e reattiva. Il progetto dimostra le competenze acquisite nel front-end durante il corso.</p>
+                        <p className="text-4xl md:text-7xl break-all text-pretty">Chess Academy</p>
+                        <p className="text-md py-5 text-pretty">Chess Academy è stato il progetto midterm presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>, sviluppato interamente con Vue.js. Questa web app sfrutta le potenzialità di Vue.js per garantire un"esperienza utente fluida e reattiva. Il progetto dimostra le competenze acquisite nel front-end durante il corso.</p>
                     </div>
                     <div className="w-11/12 lg:w-4/6">
                         <img src={imgMainPageProjectChess} className="max-w-full" alt="imgDashboard"/>
