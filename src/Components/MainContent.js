@@ -46,7 +46,7 @@ function MainContent() {
     };
     useEffect(() => {
         AOS.init({
-            duration: 2000,
+            duration: 1000,
         });
     }, []);
 
@@ -68,8 +68,8 @@ function MainContent() {
                             <div className='flex flex-col'>
                                 <div>
                                     <FontAwesomeIcon
-                                        className={`rotate-[270deg] opacity-100 transform transition-all ease-in-out ${isFlying ? '-translate-y-[200vh] opacity-0' : 'translate-y-0'
-                                            } duration-[${isFlying ? '1.5s' : '0s'}]`}
+                                        className={`rotate-[270deg] z-50 opacity-100 transform transition-all ease-in-out ${isFlying ? '-translate-y-[200vh] opacity-0' : 'translate-y-0'
+                                            } duration-[${isFlying ? '2s' : '2s'}]`}
                                         icon={faPlane}
                                     />
                                 </div>
