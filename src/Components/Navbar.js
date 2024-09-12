@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 function Navbar() {
     const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const toggleDropdown = () => {
         setIsOpen((prev) => !prev);
@@ -27,12 +28,32 @@ function Navbar() {
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [])
+    }, []);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
     return (
-        <nav>
-            <div className='flex flex-row justify-between items-center h-16'>
-                <a href="https://moustafa-dev.com/"><img className='min-w-40 max-w-40  lg:ml-20' src={logo} alt='logo' /></a>
-                <div className='flex flex-row items-center justify-center hidden md:flex '>
+        <nav className={`fixed z-50 w-full ${isScrolled ? 'flex items-center justify-center' : 'bg-white'}`}>
+            <div className={`flex flex-row justify-between items-center h-16 transition-full duration-500 ${isScrolled ? 'flex justify-center bg-white shadow-lg rounded-full mt-3 pb-1 w-[calc(1000px)]' : 'bg-white'}`}>
+                <a href="https://moustafa-dev.com/">
+                    <img className={`min-w-40 max-w-40 lg:ml-20 transition-all duration-300 ${isScrolled ? 'max-w-32' : 'max-w-40'}`} src={logo} alt='logo' />
+                </a>
+                <div className='flex flex-row items-center justify-center hidden md:flex'>
                     <Link to="/" className="relative group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:bg-gray-100 transition-all duration-300">
                         Home
                         <span className={`absolute bottom-0 w-full h-1 bg-orange-500 transition-transform duration-300 ${location.pathname === '/' ? 'scale-x-100' : 'scale-x-0'} group-hover:scale-x-100`}></span>
@@ -47,13 +68,12 @@ function Navbar() {
                     </Link>
                 </div>
 
-
                 <div className="relative dropdown md:hidden sm:block mr-5">
                     <div>
-                        <button
-                            onClick={toggleDropdown}
-                        >
-                            <svg data-v-c55a0252="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="mt-2 w-10 h-10 hover:stroke-orange-500"><path data-v-c55a0252="" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path></svg>
+                        <button onClick={toggleDropdown}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="mt-2 w-10 h-10 hover:stroke-orange-500">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
                         </button>
                     </div>
 
@@ -71,7 +91,7 @@ function Navbar() {
                 <div className='group transition hidden md:block'>
                     <a href="https://moustafa-dev.com/contact-us"
                         className='h-8 bg-orange-500 rounded-2xl px-6 flex justify-center items-center 
-                    mr-10 hover:bg-gray-950 group-hover:text-white duration-500 animate-pulse'>
+                mr-10 hover:bg-gray-950 group-hover:text-white duration-500 animate-pulse'>
                         Contattami
                     </a>
                 </div>
@@ -79,5 +99,4 @@ function Navbar() {
         </nav>
     );
 }
-
 export default Navbar;
