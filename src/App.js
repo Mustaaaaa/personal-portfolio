@@ -5,13 +5,11 @@ import MainContent from './Components/MainContent'
 import Footer from './Components/Footer'
 import AboutMe from './Components/AboutMe'
 import MyProjects from './Components/MyProjects'
-import { ScrollProvider } from './Components/Assets/ScrollDisable';
 
 
 function App() {
   return (
     <>
-      <ScrollProvider>
         <Router>
           <Navbar />
           <Routes>
@@ -21,7 +19,6 @@ function App() {
           </Routes>
           <Footer />
         </Router>
-      </ScrollProvider>
 
     </>
   )

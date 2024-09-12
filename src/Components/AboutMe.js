@@ -1,10 +1,9 @@
 import ScrollFunction from './Assets/scrollFunction.js';
 import ScrollFunctionMobile from './Assets/scrollFunctionMobile.js';
 import ScrollTop from './Assets/ScrollTop.js';
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import '../App.css';
 import imgPersonal from '../Assets/abotMe/personalImage.png';
-import { useScroll } from './Assets/ScrollDisable.js';
 function AboutMe() {
     const section1Ref = useRef(null);
     const sectionDescriptionRef = useRef(null);
@@ -21,15 +20,6 @@ function AboutMe() {
     const handleClickMobile = (sectionRef) => {
         ScrollFunctionMobile(sectionRef);
     };
-    const { setScrollDisabled } = useScroll();
-
-    useEffect(() => {
-        setScrollDisabled(true);
-
-        return () => {
-            setScrollDisabled(false);
-        };
-    }, [setScrollDisabled]);
     return (
         <div className="flex justify-center flex-col">
             <div className="container min-h-[calc(100vh-56px)] d:min-h-0 mx-auto relative flex items-center justify-center lg:pt-20 md:pt-5">
