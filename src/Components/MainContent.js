@@ -72,7 +72,7 @@ function MainContent() {
     elements_to_watch.forEach((element) => {
         observer.observe(element);
     });
-    
+
     return (
 
         <div className="flex w-full justify-center flex-col">
@@ -286,6 +286,7 @@ function MainContent() {
                         <p className='text-md py-5 text-pretty'>Fooder è una web app per ordinare cibo a domicilio, sviluppata come progetto finale in team presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Il frontend è realizzato con Vue.js per un'interfaccia utente dinamica, mentre il backend utilizza Laravel per una gestione affidabile e sicura. Questo progetto full-stack dimostra le competenze tecniche e pratiche acquisite durante lo svolgimento del corso.</p>
                     </div>
                     <div className='w-11/12 lg:w-4/6'>
+                        <img src={imgDashboardFooder} className="max-w-full" alt='imgDashboard' />
                     </div>
                 </div>
             </div>
