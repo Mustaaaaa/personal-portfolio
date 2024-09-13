@@ -50,19 +50,19 @@ function Navbar() {
     return (
         <nav className={`fixed z-50 w-full ${isScrolled ? 'flex items-center justify-center' : 'bg-white'}`}>
             <div className={`flex flex-row justify-between items-center h-16 transition-full duration-500 ${isScrolled ? 'flex justify-center bg-white shadow-lg rounded-full mt-3 pb-1 w-[calc(1000px)]' : 'bg-white'}`}>
-                <a href="https://moustafa-dev.com/">
+                <a href="/">
                     <img className={`min-w-40 max-w-40 lg:ml-20 transition-all duration-300 ${isScrolled ? 'max-w-32' : 'max-w-40'}`} src={logo} alt='logo' />
                 </a>
                 <div className='flex flex-row items-center justify-center hidden md:flex'>
-                    <Link to="/" className="relative group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:bg-gray-100 transition-all duration-300">
+                    <Link to="/#home" className="relative group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:bg-gray-100 transition-all duration-300">
                         Home
                         <span className={`absolute bottom-0 w-full h-1 bg-orange-500 transition-transform duration-300 ${location.pathname === '/' ? 'scale-x-100' : 'scale-x-0'} group-hover:scale-x-100`}></span>
                     </Link>
-                    <Link to="/AboutMe" className="relative group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:bg-gray-100 transition-all duration-300">
+                    <Link to="/#biography" className="relative group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:bg-gray-100 transition-all duration-300">
                         Biografia
                         <span className={`absolute bottom-0 w-full h-1 bg-orange-500 transition-transform duration-300 ${location.pathname === '/AboutMe' ? 'scale-x-100' : 'scale-x-0'} group-hover:scale-x-100`}></span>
                     </Link>
-                    <Link to="/MyProjects" className="relative group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:bg-gray-100 transition-all duration-300">
+                    <Link to="/#projects" className="relative group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:bg-gray-100 transition-all duration-300">
                         Progetti
                         <span className={`absolute bottom-0 w-full h-1 bg-orange-500 transition-transform duration-300 ${location.pathname === '/MyProjects' ? 'scale-x-100' : 'scale-x-0'} group-hover:scale-x-100`}></span>
                     </Link>
