@@ -10,6 +10,7 @@ import imgDashboardFooder from '../Assets/fooder/fooder-dashboard-buisness.png';
 import imgHomeGameCreator from '../Assets/gamecreator/home-gamecreator.png';
 import imgProjectsLaravelAuth from '../Assets/laravel-auth/Projects.png';
 import imgMainPageProjectChess from '../Assets/chessacademy/mainpage.png';
+import imgPersonal from '../Assets/abotMe/personalImage.png';
 
 
 
@@ -51,11 +52,32 @@ function MainContent() {
     }, []);
 
 
+    // elements
+    var elements_to_watch = document.querySelectorAll('.watch');
+
+    // callback
+    var callback = function (items) {
+        items.forEach((item) => {
+            if (item.isIntersecting) {
+                item.target.classList.add("in-page");
+            } else {
+                item.target.classList.remove("in-page");
+            }
+        });
+    }
+    // observer
+    var observer = new IntersectionObserver(callback, { threshold: 0.5 });
+
+    // apply
+    elements_to_watch.forEach((element) => {
+        observer.observe(element);
+    });
+    
     return (
 
-        <div className="flex justify-center flex-col">
+        <div className="flex w-full justify-center flex-col">
             {/*introduzione*/}
-            <div className="container mx-auto  flex flex-col items-center justify-center pt-40 ">
+            <div className="min-h-screen  bg-white z-40  flex flex-col items-center justify-center pt-40 ">
                 {showButton && (
 
                     <div className="fixed bottom-0 -right-20 transform -translate-x-1/2 z-50 group  hover:scale-110 duration-500"
@@ -98,7 +120,7 @@ function MainContent() {
                 </div>
                 {showButton && (
                     <div data-aos="zoom-in"
-                        className="fixed bg-white shadow-lg bottom-3 rounded-full flex flex-row justify-center lg:mb-0 px-5 flex-wrap">
+                        className="fixed bg-white shadow-lg bottom-3 rounded-full flex flex-row justify-center lg:mb-0 px-5 flex-wrap z-50">
                         <a href="https://html.spec.whatwg.org/"
                             class="p-3 border-800 hover:scale-150 duration-300 group">
                             <span class="absolute bottom-full left-1/2 -translate-x-1/2 text-white bg-black rounded-md p-2 text-xs opacity-0 group-hover:opacity-100 duration-300">HTML</span>
@@ -191,8 +213,72 @@ function MainContent() {
 
             </div>
 
+            <div>
+                <div className='bg-orange-500'>
+                    <div className='biography-text-section watch'>
+                        <p className='biography-text'>
+                            <span className='flex flex-col w-[calc(50%)]'>
+                                <span className='text-3xl text-pretty text-center'>Moustafa : Da Turismo a Web Developer - Un Viaggio di Scoperta</span>
+                                <span className='text-md py-5'>Ciao! Sono <strong className="font-bold">Moustafa</strong>, ho 23 anni con origini egiziane e un cuore italiano. La mia storia è un intreccio di
+                                    sfide e scoperte che mi hanno portato a trovare la mia vera passione: lo sviluppo web.</span>
+                            </span>
+
+                            <img src={imgPersonal} className="biography-tex " alt='imgDashboard' />
+                        </p>
+                    </div>
+                    <div className='biography-text-section watch'>
+                        <p className='biography-text'>
+                            <span className='flex flex-col w-[calc(50%)]'>
+                                <span className='text-3xl text-pretty text-center'>Le mie radici e il percorso formativo</span>
+                                <span className='text-md py-5'>Sono nato in Egitto ma cresciuto in Italia, ho vissuto un'esperienza educativa che ha abbracciato due mondi. Ho completato
+                                    il mio percorso scolastico qui in Italia, dalle elementari fino al diploma nel settore turistico. Tuttavia, come spesso accade nella vita,
+                                    ciò che studiamo non sempre riflette ciò che siamo destinati a diventare.</span>
+                            </span>
+
+                            <img src={imgPersonal} className="biography-tex " alt='imgDashboard' />
+                        </p>
+                    </div>
+                    <div className='biography-text-section watch'>
+                        <p className='biography-text'>
+                            <span className='flex flex-col w-[calc(50%)]'>
+                                <span className='text-3xl text-pretty text-center'>Le prime esperienze lavorative</span>
+                                <span className='text-md py-5'>Il settore turistico, nonostante la mia formazione, non risuonava con le mie aspirazioni. Così, ho iniziato a esplorare diverse opportunità:
+                                    <br />
+                                    <strong>1) L'azienda edile di famiglia</strong>: Un'esperienza che mi ha insegnato il valore del lavoro duro, ma che ho dovuto abbandonare a causa di allergie.
+                                    <br />
+                                    <strong>2) Magazziniere</strong>: Un ruolo che mi ha permesso di crescere rapidamente, diventando capoturno in soli 12 mesi. Eppure, sentivo che mancava qualcosa...</span>
+                            </span>
+
+                            <img src={imgPersonal} className="biography-tex " alt='imgDashboard' />
+                        </p>
+                    </div>
+                    <div className='biography-text-section watch'>
+                        <p className='biography-text'>
+                            <span className='flex flex-col w-[calc(50%)]'>
+                                <span className='text-3xl text-pretty text-center'>La scintilla che ha dato inizio al mio percorso</span>
+                                <span className='text-md py-5'>Fu durante una riflessione sul mio percorso che un ricordo venne a galla. Mi tornò in mente un progetto scolastico in cui mi ero impegnato molto in <strong>HTML</strong> e <strong>CSS </strong> 
+                                che mi aveva fatto guadagnare l'unico 10 in cinque anni di superiori. Quella scintilla di entusiasmo che avevo provato allora si riaccese, indicandomi la strada da seguire.</span>
+                            </span>
+
+                            <img src={imgPersonal} className="biography-tex " alt='imgDashboard' />
+                        </p>
+                    </div>
+                    <div className='biography-text-section watch'>
+                        <p className='biography-text'>
+                            <span className='flex flex-col w-[calc(50%)]'>
+                                <span className='text-3xl text-pretty text-center'>Il salto nel mondo dello sviluppo web</span>
+                                <span className='text-md py-5'>Così ho deciso di seguire questa nuova direzione, mi sono iscritto al corso di Boolean. È stato qui che ho realizzato che lo sviluppo web non era solo una nuova carriera,
+                                ma la realizzazione di un sogno che avevo da ragazzino, anche se solo ora ne ero pienamente consapevole.</span>
+                            </span>
+
+                            <img src={imgPersonal} className="biography-tex " alt='imgDashboard' />
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             {/* anteprima primo progetto fooder*/}
-            <div className="container min-h-screen d:min-h-0 mx-auto  flex  items-center justify-center lg:pt-20 lg:pt-0">
+            <div className="container min-h-screen bg-white z-40 d:min-h-0 mx-auto  flex  items-center justify-center lg:pt-20 lg:pt-0">
 
                 <div className='flex flex-col items-center lg:flex-row flex-grow'>
                     <div className=' w-full lg:w-2/6 flex flex-col px-5'>
@@ -200,7 +286,6 @@ function MainContent() {
                         <p className='text-md py-5 text-pretty'>Fooder è una web app per ordinare cibo a domicilio, sviluppata come progetto finale in team presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Il frontend è realizzato con Vue.js per un'interfaccia utente dinamica, mentre il backend utilizza Laravel per una gestione affidabile e sicura. Questo progetto full-stack dimostra le competenze tecniche e pratiche acquisite durante lo svolgimento del corso.</p>
                     </div>
                     <div className='w-11/12 lg:w-4/6'>
-                        <img src={imgDashboardFooder} className="max-w-full" alt='imgDashboard' />
                     </div>
                 </div>
             </div>
