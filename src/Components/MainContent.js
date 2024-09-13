@@ -66,7 +66,7 @@ function MainContent() {
         });
     }
     // observer
-    var observer = new IntersectionObserver(callback, { threshold: 0.5 });
+    var observer = new IntersectionObserver(callback, { threshold: 0.6 });
 
     // apply
     elements_to_watch.forEach((element) => {
@@ -91,7 +91,7 @@ function MainContent() {
                                 <div>
                                     <FontAwesomeIcon
                                         className={`rotate-[270deg] z-50 opacity-100 transform transition-all ease-in-out ${isFlying ? '-translate-y-[200vh] opacity-0' : 'translate-y-0'
-                                            } duration-[${isFlying ? '2s' : '2s'}]`}
+                                            } duration-[2s]`}
                                         icon={faPlane}
                                     />
                                 </div>
@@ -111,7 +111,7 @@ function MainContent() {
                         <p data-aos="fade-up" className="text-xl md:text-3xl ml-0 md:ml-20 break-all">Jr. Full-Stack Web Developer</p>
                     </div>
                 </div>
-                <div className="flex justify-center items-center w-full lg:w-[calc(70%)]">
+                <div className="flex justify-center items-center w-full lg:w-[calc(70%)] z-50">
                     <Lottie
                         animationData={animationData}
                         className='md:-mt-20 -mt-10'
@@ -278,7 +278,7 @@ function MainContent() {
             </div>
 
             {/* anteprima primo progetto fooder*/}
-            <div className="container min-h-screen bg-white z-40 d:min-h-0 mx-auto  flex  items-center justify-center lg:pt-20 lg:pt-0">
+            <div className="container min-h-screen bg-white z-10 d:min-h-0 mx-auto  flex  items-center justify-center lg:pt-20 lg:pt-0">
 
                 <div className='flex flex-col items-center lg:flex-row flex-grow'>
                     <div className=' w-full lg:w-2/6 flex flex-col px-5'>
