@@ -13,6 +13,7 @@ import Lottie from "lottie-react";
 import animationData from '../Assets/homeAnimation.json';
 import animation100 from '../Assets/100animation.json';
 import fireWorksAnimation from '../Assets/fireworks.json';
+import wavesAnimation from '../Assets/waves.json';
 
 import imgDashboardFooder from '../Assets/fooder/fooder-dashboard-buisness.png';
 import imgHomeGameCreator from '../Assets/gamecreator/home-gamecreator.png';
@@ -98,35 +99,9 @@ function MainContent() {
 
     return (
 
-        <div className="flex w-full justify-center flex-col">
+        <div id="home" className="flex relative w-full justify-center flex-col">
             {/*introduzione*/}
-            <div id="home" className="min-h-[calc(100vh)]  bg-white z-40  flex flex-col items-center justify-center pt-20 ">
-                {showButton && (
-
-                    <div className="fixed bottom-0 -right-20 transform -translate-x-1/2 z-50 group  hover:scale-110 duration-500"
-                    >
-                        <button
-                            onClick={handleFlyAway}
-                            className="relative bg-opacity-20 bg-orange-500 rounded-tl-full w-40 h-20  text-2xl hover:bg-opacity-100 duration-500 flex justify-center items-center"
-                            data-aos="fade-up"
-                        >
-                            <div className='flex flex-col'>
-                                <div>
-                                    <FontAwesomeIcon
-                                        className={`rotate-[270deg] z-50 opacity-100 transform transition-all ease-in-out ${isFlying ? '-translate-y-[200vh] opacity-0' : 'translate-y-0'
-                                            } duration-[2s]`}
-                                        icon={faPlane}
-                                    />
-                                </div>
-                                <div className='text-sm'>
-                                    Scroll to top
-                                </div>
-                            </div>
-
-
-                        </button>
-                    </div>
-                )}
+            <div className="fixed top-0 left- min-h-[calc(100vh)] w-full px-[calc(25%)] -z-10  flex flex-col items-center justify-center pt-20 ">
                 <div className="flex flex-col md:flex-row justify-center items-center text-center md:text-left">
                     <div className="hover:text-orange-500">
                         <p data-aos="fade-right" className="text-4xl md:text-8xl break-all">Moustafa</p>
@@ -141,6 +116,34 @@ function MainContent() {
                         data-aos="zoom-in"
                     />
                 </div>
+            </div>
+            <div className='flex justify-center z-50'>
+                {showButton && (
+
+                    <div className="fixed bottom-0 -right-20 transform -translate-x-1/2  group  hover:scale-110 duration-500"
+                    >
+                        <button
+                            onClick={handleFlyAway}
+                            className="relative bg-opacity-20 bg-orange-500 rounded-tl-full w-40 h-20  text-2xl hover:bg-opacity-100 duration-500 flex justify-center items-center"
+                            data-aos="fade-up"
+                        >
+                            <div className='flex flex-col'>
+                                <div>
+                                    <FontAwesomeIcon
+                                        className={`rotate-[270deg] opacity-100 transform transition-all ease-in-out ${isFlying ? '-translate-y-[200vh] opacity-0' : 'translate-y-0'
+                                            } duration-[2s]`}
+                                        icon={faPlane}
+                                    />
+                                </div>
+                                <div className='text-sm'>
+                                    Scroll to top
+                                </div>
+                            </div>
+
+
+                        </button>
+                    </div>
+                )}
                 {showButton && (
                     <div data-aos="zoom-in"
                         className="fixed bg-white shadow-lg bottom-3 rounded-full flex flex-row justify-center lg:mb-0 px-5 flex-wrap z-50">
@@ -235,8 +238,13 @@ function MainContent() {
                 )}
             </div>
 
-            <div id="biography">
-                <div className='bg-orange-500'>
+            <div>
+                <div className='rotate-[180deg] mt-[calc(100vh)]'>
+                    <Lottie
+                        animationData={wavesAnimation}
+                    />
+                </div>
+                <div id="biography" className='bg-orange-500 m[calc(100vh)] z-20'>
                     <div className='biography-text-section watch'>
                         <p className='biography-text'>
                             <span className='flex flex-col w-[calc(50%)] items-center'>
@@ -303,12 +311,18 @@ function MainContent() {
                         </p>
                     </div>
                 </div>
+                    <div>
+                        <Lottie
+                        animationData={wavesAnimation}
+                        className='bg-white'
+                        />
+                    </div>
             </div>
 
-            <div id="projects">
+            <div id="projects" className='bg-white'>
 
                 {/* anteprima primo progetto fooder*/}
-                <div className=" min-h-screen w-full bg-white z-10  mx-auto  flex  items-center justify-center lg:pt-20 lg:pt-0">
+                <div className="relative min-h-screen w-full bg-white z-10  mx-auto  flex  items-center justify-center lg:pt-20 lg:pt-0">
 
                     <div className='max-w-[calc(1536px)] flex flex-col items-center lg:flex-row flex-grow'>
                         <div className=' w-full lg:w-2/6 flex flex-col px-5'>
