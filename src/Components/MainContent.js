@@ -96,7 +96,7 @@ function MainContent() {
     elements_to_watch.forEach((element) => {
         observer.observe(element);
     });
-
+    
     return (
 
         <div id="home" className="flex relative w-full justify-center flex-col">
@@ -105,8 +105,19 @@ function MainContent() {
                 <div className="flex flex-col md:flex-row justify-center items-center text-center md:text-left">
                     <div className="hover:text-orange-500">
                         <p data-aos="fade-right" className="text-4xl md:text-8xl break-all">Moustafa</p>
-                        <p data-aos="fade-left" className="text-4xl md:text-8xl pl-0 md:pl-64 break-all">Ibrahim</p>
-                        <p data-aos="fade-up" className="text-xl md:text-3xl ml-0 md:ml-20 break-all">Jr. Full-Stack Web Developer</p>
+                        <p data-aos="fade-left" className="text-4xl md:text-8xl pl-0 md:pl-64 ">Ibrahim</p>
+                        <p className="text-xl md:text-3xl ml-0 md:ml-20 break-all text-black container-text-dynamic">
+                            <span className='text-31' data-aos="fade-down">
+                                Junior
+                            </span>
+                            <span className='dynamic-text' data-aos="fade-up">
+                                <ul>
+                                    <li><span>Full-stack Web Developer</span></li>
+                                    <li><span>Front-end Web Developer</span></li>
+                                    <li><span>Back-end Web Developer</span></li>
+                                </ul>
+                            </span>
+                        </p>
                     </div>
                 </div>
                 <div className="flex justify-center items-center max-w-[calc(743px)] z-50">
@@ -239,7 +250,7 @@ function MainContent() {
             </div>
 
             <div>
-                <div className='rotate-[180deg] mt-[calc(100vh)]'>
+                <div className='rotate-[180deg] mt-[calc(100vh)] -mb-10'>
                     <Lottie
                         animationData={wavesAnimation}
                     />
@@ -311,12 +322,12 @@ function MainContent() {
                         </p>
                     </div>
                 </div>
-                    <div>
-                        <Lottie
+                <div>
+                    <Lottie
                         animationData={wavesAnimation}
                         className='bg-white'
-                        />
-                    </div>
+                    />
+                </div>
             </div>
 
             <div id="projects" className='bg-white'>
