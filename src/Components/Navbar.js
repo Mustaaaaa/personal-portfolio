@@ -2,6 +2,8 @@ import logo from '../Assets/MoustafaLogo.png'
 import { Link, useLocation } from 'react-router-dom';
 import React, { useState } from 'react';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Navbar() {
     const location = useLocation();
@@ -16,6 +18,11 @@ function Navbar() {
         setIsOpen(false);
     };
 
+    React.useEffect(() => {
+        AOS.init({
+            duration: 100,
+        });
+    }, []);
     React.useEffect(() => {
         const handleClickOutside = (event) => {
             if (event.target.closest('.dropdown')) {
@@ -48,7 +55,7 @@ function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
     return (
-        <nav className={`fixed z-50 w-full ${isScrolled ? 'flex items-center justify-center' : 'bg-white'}`}>
+        <nav className={`fixed z-50 w-full ${isScrolled ? 'flex items-center justify-center' : 'bg-white'}`}                         data-aos="fade-down">
             <div className={`flex flex-row justify-between items-center h-16 transition-full duration-500 ${isScrolled ? 'flex justify-center bg-white shadow-lg rounded-full mt-3 pb-1 w-[calc(1000px)]' : 'bg-white'}`}>
                 <a href="/">
                     <img className={`min-w-40 max-w-40 lg:ml-20 transition-all duration-300 ${isScrolled ? 'max-w-32' : 'max-w-40'}`} src={logo} alt='logo' />
