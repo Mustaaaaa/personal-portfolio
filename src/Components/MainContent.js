@@ -31,9 +31,11 @@ function MainContent() {
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 1) {
-                setShowButton(true);
+                    setShowButton(true);
             } else {
-                setShowButton(false);
+                setTimeout(() => {
+                    setShowButton(false);
+                }, 1000);
             }
 
         };
@@ -96,7 +98,6 @@ function MainContent() {
     elements_to_watch.forEach((element) => {
         observer.observe(element);
     });
-    
     return (
 
         <div id="home" className="flex relative w-full justify-center flex-col">
@@ -104,8 +105,8 @@ function MainContent() {
             <div className="fixed top-0 left- min-h-[calc(100vh)] w-full px-[calc(25%)] -z-10  flex flex-col items-center justify-center pt-20 ">
                 <div className="flex flex-col md:flex-row justify-center items-center text-center md:text-left">
                     <div className="hover:text-orange-500">
-                        <p data-aos="fade-right" className="text-4xl md:text-8xl break-all">Moustafa</p>
-                        <p data-aos="fade-left" className="text-4xl md:text-8xl pl-0 md:pl-64 ">Ibrahim</p>
+                        <p data-aos="fade-down-right" className="text-4xl md:text-8xl break-all">Moustafa</p>
+                        <p data-aos="fade-up-left" className="text-4xl md:text-8xl pl-0 md:pl-64 ">Ibrahim</p>
                         <p className="text-xl md:text-3xl ml-0 md:ml-20 break-all text-black container-text-dynamic">
                             <span className='text-31' data-aos="fade-down">
                                 Junior
@@ -120,11 +121,11 @@ function MainContent() {
                         </p>
                     </div>
                 </div>
-                <div className="flex justify-center items-center max-w-[calc(743px)] z-50">
+                <div className="flex justify-center items-center max-w-[calc(1500px)] z-50">
                     <Lottie
                         animationData={animationData}
                         className='md:-mt-20 -mt-10'
-                        data-aos="zoom-in"
+                        data-aos="zoom-in-up"
                     />
                 </div>
             </div>
@@ -156,7 +157,7 @@ function MainContent() {
                     </div>
                 )}
                 {showButton && (
-                    <div data-aos="zoom-in"
+                    <div data-aos="zoom-in-up"
                         className="fixed bg-white shadow-lg bottom-3 rounded-full flex flex-row justify-center lg:mb-0 px-5 flex-wrap z-50">
                         <a href="https://html.spec.whatwg.org/"
                             class="p-3 border-800 hover:scale-150 duration-300 group">
