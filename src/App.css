@@ -1,7 +1,7 @@
 .progress-bar {
   position: absolute;
   top: 58px;
-  left: 587px;
+  left: 0px;
   height: 5px;
   background: #F97316;
   width: 0%;
@@ -113,4 +113,18 @@
 }
 .background-orange{
   background-color: #F97316;
+}
+
+.mwrap{
+  width: 300% !important;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.mwrap1{
+  background-color: white;
+  width: 300% !important;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
 }
