@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import '../App.css';
-
+import ProjectSection from './Assets/projectSection'
+import BiographySection from './Assets/biographySection'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlane } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,17 +12,7 @@ import 'aos/dist/aos.css';
 
 import Lottie from "lottie-react";
 import animationData from '../Assets/homeAnimation.json';
-import animation100 from '../Assets/100animation.json';
-import fireWorksAnimation from '../Assets/fireworks.json';
-import wavesAnimation from '../Assets/waves.json';
 
-import imgDashboardFooder from '../Assets/fooder/fooder-dashboard-buisness.png';
-import imgHomeGameCreator from '../Assets/gamecreator/home-gamecreator.png';
-import imgProjectsLaravelAuth from '../Assets/laravel-auth/Projects.png';
-import imgMainPageProjectChess from '../Assets/chessacademy/mainpage.png';
-import imgPersonal from '../Assets/abotMe/personalImage.png';
-import personalDiploma from '../Assets/abotMe/diplomaa.jpg';
-import masterBoolean from '../Assets/abotMe/masterboolean.png';
 
 
 
@@ -31,7 +22,7 @@ function MainContent() {
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 1) {
-                    setShowButton(true);
+                setShowButton(true);
             } else {
                 setTimeout(() => {
                     setShowButton(false);
@@ -98,16 +89,17 @@ function MainContent() {
     elements_to_watch.forEach((element) => {
         observer.observe(element);
     });
+
     return (
 
         <div id="home" className="flex relative w-full justify-center flex-col">
             {/*introduzione*/}
             <div className="fixed top-0 left- min-h-[calc(100vh)] w-full px-[calc(25%)] -z-10  flex flex-col items-center justify-center pt-20 ">
-                <div className="flex flex-col md:flex-row justify-center items-center text-center md:text-left">
-                    <div className="hover:text-orange-500">
-                        <p data-aos="fade-down-right" className="text-4xl md:text-8xl break-all">Moustafa</p>
-                        <p data-aos="fade-up-left" className="text-4xl md:text-8xl pl-0 md:pl-64 ">Ibrahim</p>
-                        <p className="text-xl md:text-3xl ml-0 md:ml-20 break-all text-black container-text-dynamic">
+                <div className="flex flex-col md:flex-row justify-center items-center text-center md:text-let">
+                    <div>
+                        <p data-aos="fade-down-right" className="text-6xl md:text-8xl break-al">Moustafa</p>
+                        <p data-aos="fade-up-left" className="text-6xl md:text-8xl pl-0 md:pl-64 ">Ibrahim</p>
+                        <p className="text-3xl ml-0 md:ml-20 break-al text-black container-text-dynamic">
                             <span className='text-31' data-aos="fade-down">
                                 Junior
                             </span>
@@ -121,7 +113,7 @@ function MainContent() {
                         </p>
                     </div>
                 </div>
-                <div className="flex justify-center items-center max-w-[calc(1500px)] z-50">
+                <div className="flex justify-center items-center max-w-[calc(800px)] z-50">
                     <Lottie
                         animationData={animationData}
                         className='md:-mt-20 -mt-10'
@@ -250,145 +242,15 @@ function MainContent() {
                 )}
             </div>
 
-            <div>
-                <div className='rotate-[180deg] mt-[calc(100vh)] -mb-10'>
-                    <Lottie
-                        animationData={wavesAnimation}
-                    />
-                </div>
-                <div id="biography" className='bg-orange-500 m[calc(100vh)] z-20'>
-                    <div className='biography-text-section watch'>
-                        <p className='biography-text'>
-                            <span className='flex flex-col w-[calc(50%)] items-center'>
-                                <span className='text-3xl text-pretty text-center'>Moustafa : Da Turismo a Web Developer</span>
-                                <span className='text-md pt-5 w-[calc(75%)]'>Ciao! Sono <strong className="font-bold">Moustafa</strong>, ho 23 anni con origini egiziane e un cuore italiano. La mia storia è un intreccio di
-                                    sfide e scoperte che mi hanno portato a trovare la mia vera passione: lo sviluppo web.</span>
-                            </span>
 
-                            <img src={imgPersonal} alt='imgDashboard' />
-                        </p>
-                    </div>
-                    <div className='biography-text-section watch'>
-                        <p className='biography-text'>
-                            <img src={personalDiploma} className="w-[calc(350px)]" alt='imgDashboard' />
-                            <span className='flex flex-col w-[calc(50%)] items-center'>
-                                <span className='text-3xl text-pretty text-center'>Le mie radici e il percorso formativo</span>
-                                <span className='text-md pt-5 w-[calc(75%)]'>Sono nato in Egitto ma cresciuto in Italia, ho vissuto un'esperienza educativa che ha abbracciato due mondi. Ho completato
-                                    il mio percorso scolastico qui in Italia, dalle elementari fino al diploma nel settore turistico. Tuttavia, come spesso accade nella vita,
-                                    ciò che studiamo non sempre riflette ciò che siamo destinati a diventare.</span>
-                            </span>
 
-                        </p>
-                    </div>
-                    <div className='biography-text-section watch'>
-                        <p className='biography-text'>
-                            <span className='flex flex-col w-[calc(50%)] items-center '>
-                                <span className='text-3xl text-pretty text-center'>Le prime esperienze lavorative</span>
-                                <span className='text-md pt-5 w-[calc(75%)]'>Il settore turistico, nonostante la mia formazione, non risuonava con le mie aspirazioni. Così, ho iniziato a esplorare diverse opportunità:
-                                    <br />
-                                    <strong>1) L'azienda edile di famiglia</strong>: Un'esperienza che mi ha insegnato il valore del lavoro duro, ma che ho dovuto abbandonare a causa di allergie.
-                                    <br />
-                                    <strong>2) Magazziniere</strong>: Un ruolo che mi ha permesso di crescere rapidamente, diventando capoturno in soli 12 mesi. Eppure, sentivo che mancava qualcosa...</span>
-                            </span>
+            <BiographySection />
+            <ProjectSection />
 
-                        </p>
-                    </div>
-                    <div className='biography-text-section watch'>
-                        <p className='biography-text'>
-                            <span className='flex flex-col w-[calc(50%)] items-center'>
-                                <span className='text-3xl text-pretty text-center'>La scintilla che ha dato inizio al mio percorso</span>
-                                <span className='text-md pt-5 w-[calc(75%)]'>Fu durante una riflessione sul mio percorso che un ricordo venne a galla. Mi tornò in mente un progetto scolastico in cui mi ero impegnato molto in <strong>HTML</strong> e <strong>CSS </strong>
-                                    che mi aveva fatto guadagnare l'unico 10 in cinque anni di superiori. Quella scintilla di entusiasmo che avevo provato allora si riaccese, indicandomi la strada da seguire.</span>
-                            </span>
 
-                            <Lottie
-                                animationData={animation100}
-                                className='w-[calc(350px)]'
-                            />
-                        </p>
-                    </div>
-                    <div className='biography-text-section watch'>
-                        <p className='biography-text'>
-                            <img src={masterBoolean} className="w-[calc(350px)] rounded-3xl" alt='imgDashboard' />
-                            <span className='flex flex-col w-[calc(50%)] items-center z-10'>
-                                <span className='text-3xl text-pretty text-center'>Il salto nel mondo dello sviluppo web</span>
-                                <span className='text-md pt-5 w-[calc(75%)]'>Così ho deciso di seguire questa nuova direzione, mi sono iscritto al corso di Boolean. È stato qui che ho realizzato che lo sviluppo web non era solo una nuova carriera,
-                                    ma la realizzazione di un sogno che avevo da ragazzino, anche se solo ora ne ero pienamente consapevole.</span>
-                            </span>
 
-                            <Lottie
-                                animationData={fireWorksAnimation}
-                                className='fireworks'
-                            />
-                        </p>
-                    </div>
-                </div>
-                <div>
-                    <Lottie
-                        animationData={wavesAnimation}
-                        className='bg-white'
-                    />
-                </div>
-            </div>
-
-            <div id="projects" className='bg-white'>
-
-                {/* anteprima primo progetto fooder*/}
-                <div className="relative min-h-screen w-full bg-white z-10  mx-auto  flex  items-center justify-center lg:pt-20 lg:pt-0">
-
-                    <div className='max-w-[calc(1536px)] flex flex-col items-center lg:flex-row flex-grow'>
-                        <div className=' w-full lg:w-2/6 flex flex-col px-5'>
-                            <p className='text-4xl md:text-7xl break-all'>Fooder</p>
-                            <p className='text-md py-5 text-pretty'>Fooder è una web app per ordinare cibo a domicilio, sviluppata come progetto finale in team presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Il frontend è realizzato con Vue.js per un'interfaccia utente dinamica, mentre il backend utilizza Laravel per una gestione affidabile e sicura. Questo progetto full-stack dimostra le competenze tecniche e pratiche acquisite durante lo svolgimento del corso.</p>
-                        </div>
-                        <div className='w-11/12 lg:w-4/6'>
-                            <img src={imgDashboardFooder} className="max-w-full" alt='imgDashboard' />
-                        </div>
-                    </div>
-                </div>
-
-                {/* anteprima primo progetto gamecreator*/}
-                <div className="container min-h-screen mx-auto  flex  items-center justify-center pt-20 lg:pt-0">
-                    <div className="flex flex-col  items-center lg:flex-row">
-                        <div className=" w-full lg:w-2/6 flex flex-col px-5">
-                            <p className='text-4xl md:text-7xl break-all text-pretty'>GameCreator</p>
-                            <p className='text-md py-5 text-pretty'>GameCreator è una web app per la creazione di personaggi stile Dungeons & Dragons, sviluppata in team presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Utilizza Laravel per la creazione del backend. Questo progetto dimostra le competenze nel backend acquisite durante il corso, inclusa l'autenticazione degli utenti e la gestione dei dati di del personaggio creato o già esistente.</p>
-                        </div>
-                        <div className="w-11/12 lg:w-4/6">
-                            <img src={imgHomeGameCreator} className="max-w-full" alt='imgDashboard' />
-                        </div>
-                    </div>
-                </div>
-
-                {/* anteprima primo progetto Laravel-auth*/}
-                <div className="container min-h-screen mx-auto  flex items-center justify-center  pt-20 lg:pt-0">
-                    <div className="flex flex-col items-center lg:flex-row">
-                        <div className="w-full lg:w-2/6 flex flex-col px-5">
-                            <p className="text-4xl md:text-7xl break-all text-pretty">Laravel-auth</p>
-                            <p className="text-md py-5 text-pretty">Laravel-Auth è una web app per la pubblicazione dei progetti di ogni tipo e il salvataggio nel database per poi essere riportati in un progetto Front-end(non ancora sviluppato), sviluppata interamente in solitario presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>. Utilizza Laravel per il backend e include un sistema di autenticazione degli utenti sviluppato autonomamente. Questo progetto evidenzia le competenze nel backend development acquisite durante il corso.</p>
-                        </div>
-
-                        <div className="w-11/12 lg:w-4/6">
-                            <img src={imgProjectsLaravelAuth} className="max-w-full" alt="imgDashboard" />
-                        </div>
-                    </div>
-                </div>
-
-                {/* anteprima primo progetto Chess Academy*/}
-
-                <div className="container min-h-screen mx-auto  flex items-center justify-center  pt-20 lg:pt-0">
-                    <div className="flex flex-col items-center lg:flex-row">
-                        <div className="w-full lg:w-2/6 flex flex-col px-5">
-                            <p className="text-4xl md:text-7xl break-all text-pretty">Chess Academy</p>
-                            <p className="text-md py-5 text-pretty">Chess Academy è stato il progetto midterm presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>, sviluppato interamente con Vue.js. Questa web app sfrutta le potenzialità di Vue.js per garantire un"esperienza utente fluida e reattiva. Il progetto dimostra le competenze acquisite nel front-end durante il corso.</p>
-                        </div>
-                        <div className="w-11/12 lg:w-4/6">
-                            <img src={imgMainPageProjectChess} className="max-w-full" alt="imgDashboard" />
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div >
+
     );
 }
 
