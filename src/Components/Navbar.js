@@ -29,7 +29,7 @@ function Navbar() {
             document.getElementById('projects')
         ];
 
-        const maxWidth = 438;
+        const maxWidth = 411;
         const totalSections = sections.length;
 
         const handleScrollProgress = () => {
@@ -68,15 +68,16 @@ function Navbar() {
     return (
         <>
             <nav className={`fixed z-50 w-full ${isScrolled ? 'flex items-center justify-center' : 'bg-white'}`} data-aos="fade-down">
-            <div className={`relative flex flex-row justify-between items-center h-16 transition-all duration-700 ease-[cubic-bezier(0.25, 1, 0.5, 1)] ${isScrolled ? 'bg-white shadow-lg rounded-full mt-3 pb-1 w-full scale-95' : 'bg-white scale-60'}`}>
-            <a href="/">
+                <div className={`relative flex flex-row justify-between items-center h-16 transition-all duration-700 ease-in-out ${isScrolled ? 'bg-white shadow-lg rounded-full mt-3 pb-1 w-full scale-95' : 'bg-white scale-60'}`}>
+                    <a href="/" className='mt-1'>
                         <img className={`min-w-40 max-w-40 lg:ml-20 transition-all duration-500  ${isScrolled ? 'max-w-32' : 'max-w-40'}`} src={logo} alt='logo' />
                     </a>
-                    <div className='flex flex-row items-center justify-center hidden md:flex'>
+                    <div className='relative flex flex-row items-center justify-center hidden md:flex'>
                         <Link to="/#home" className="group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:scale-125 transition-all duration-500">
                             Home
                             <span className=''></span>
                         </Link>
+                            <div id="progress-bar" className="progress-bar"></div>
                         <Link to="/#biography" className="group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:scale-125 transition-all duration-500">
                             Biografia
                             <span className=''></span>
@@ -85,9 +86,8 @@ function Navbar() {
                             Progetti
                             <span className=''></span>
                         </Link>
-                        <div id="progress-bar" className="progress-bar"></div>
                     </div>
-                    <div className='group transition hidden md:block'>
+                    <div className='group transition mt-1'>
                         <a href="https://moustafa-dev.com/contact-us"
                             className='h-8 bg-orange-500 rounded-2xl px-6 flex justify-center items-center 
                 mr-10 hover:bg-gray-950 group-hover:text-white duration-500 animate-pulse'>
