@@ -13,6 +13,8 @@ import imgPersonal from '../../Assets/abotMe/personalImage.png';
 import personalDiploma from '../../Assets/abotMe/diplomaa.jpg';
 import masterBoolean from '../../Assets/abotMe/masterboolean.png';
 
+import Lenis from '@studio-freight/lenis';
+
 
 
 function App() {
@@ -20,6 +22,20 @@ function App() {
     useEffect(() => {
 
         gsap.registerPlugin(ScrollTrigger);
+        const lenis = new Lenis({
+            duration: 1.2,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
 
         const workInfoItems = workRef.current.querySelectorAll('.photo-animation');
         workInfoItems.forEach((item, index) => {
@@ -88,10 +104,10 @@ function App() {
                             </div>
                         </div>
                         <div className='h-screen flex flex-col justify-center relative'>
-                                <Lottie
-                                    animationData={fireWorksAnimation}
-                                    className='fireworks'
-                                />
+                            <Lottie
+                                animationData={fireWorksAnimation}
+                                className='fireworks'
+                            />
                             <div className='work__left-bl'>
                                 <span className=' text-3xl text-center flex justify-center pb-5'>Il salto nel mondo dello sviluppo web</span>
                                 <span className='text-md z-40'>Così ho deciso di seguire questa nuova direzione, mi sono iscritto al corso di Boolean. È stato qui che ho realizzato che lo sviluppo web non era solo una nuova carriera,
@@ -115,7 +131,7 @@ function App() {
                                 <Lottie
                                     animationData={workAnimation}
                                     className='w-[calc(480px)] rounded-3xl background-orange'
-                                />                          
+                                />
                             </div>
                             <div className='absolute w-full h-full photo-animation flex justify-center background-orange'>
                                 <Lottie
