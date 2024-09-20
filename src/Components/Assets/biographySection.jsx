@@ -13,7 +13,6 @@ import imgPersonal from '../../Assets/abotMe/personalImage.png';
 import personalDiploma from '../../Assets/abotMe/diplomaa.jpg';
 import masterBoolean from '../../Assets/abotMe/masterboolean.png';
 
-import Lenis from '@studio-freight/lenis';
 
 
 
@@ -22,20 +21,6 @@ function App() {
     useEffect(() => {
 
         gsap.registerPlugin(ScrollTrigger);
-        const lenis = new Lenis({
-            duration: 1.2,
-        });
-
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
-
-        lenis.on('scroll', ScrollTrigger.update);
-        gsap.ticker.add((time) => {
-            lenis.raf(time * 1000);
-        });
 
         const workInfoItems = workRef.current.querySelectorAll('.photo-animation');
         workInfoItems.forEach((item, index) => {
