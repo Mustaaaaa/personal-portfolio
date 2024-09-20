@@ -5,6 +5,7 @@ import React from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/src/all';
+import Lenis from '@studio-freight/lenis';
 
 
 import imgDashboardFooder from '../../Assets/fooder/fooder-dashboard-buisness.png';
@@ -21,6 +22,19 @@ function ProjectSection() {
     useGSAP(
         () => {
             gsap.registerPlugin(ScrollTrigger);
+
+            const lenis = new Lenis({
+                duration: 1.2,
+            });
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+            lenis.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
             
             const sections = gsap.utils.toArray(".panel");
 
