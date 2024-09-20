@@ -225,12 +225,12 @@ section.sec::before{
   position: absolute;
   left: 100px;
   bottom: 90px;
-  transform: translateY(50%);
+  transform: translateY(250%);
 }
 .img-vertical-top-right{
   width: 40%;
   position: absolute;
   right: 6%;
   top: 90px;
-  transform: translateY(50%);
+  transform: translateY(250%);
 }
