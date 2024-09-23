@@ -17,17 +17,17 @@ import masterBoolean from '../../Assets/abotMe/masterboolean.png';
 
 
 function App() {
-    const workRef = useRef(null);
+    const biographySectionRef = useRef(null);
     useEffect(() => {
 
         gsap.registerPlugin(ScrollTrigger);
 
-        const workInfoItems = workRef.current.querySelectorAll('.photo-animation');
-        workInfoItems.forEach((item, index) => {
-            item.style.zIndex = workInfoItems.length - index;
+        const biographySection = biographySectionRef.current.querySelectorAll('.photo-animation');
+        biographySection.forEach((item, index) => {
+            item.style.zIndex = biographySection.length - index;
         });
 
-        gsap.set(workInfoItems, { clipPath: 'inset(0px 0px 0px 0px)' });
+        gsap.set(biographySection, { clipPath: 'inset(0px 0px 0px 0px)' });
         const animation = gsap.to('.photo-animation:not(:last-child)', {
             clipPath: 'inset(0px 0px 100% 0px)',
             stagger: 0.5,
@@ -35,7 +35,7 @@ function App() {
         });
 
         ScrollTrigger.create({
-            trigger: workRef.current,
+            trigger: biographySectionRef.current,
             start: 'top top',
             end: 'bottom bottom',
             animation: animation,
@@ -53,18 +53,18 @@ function App() {
                     animationData={wavesAnimation}
                 />
             </div>
-            <div ref={workRef} id="biography" className="flex background-orange">
+            <div ref={biographySectionRef} id="biography" className="flex background-orange">
                 <div className='relative w-[calc(54%)] top-0'>
                     <div className='ml-auto w-[calc(40vw)]'>
                         <div className='h-screen flex flex-col justify-center'>
-                            <div className='work__left-bl'>
+                            <div>
                                 <span className='text-3xl text-center flex justify-center pb-5'>Moustafa : Da Turismo a Web Developer</span>
                                 <span className='text-md'>Ciao! Sono <strong className="font-bold">Moustafa</strong>, ho 23 anni con origini egiziane e un cuore italiano. La mia storia è un intreccio di
                                     sfide e scoperte che mi hanno portato a trovare la mia vera passione: lo sviluppo web.</span>
                             </div>
                         </div>
                         <div className='h-screen flex flex-col justify-center'>
-                            <div className='work__left-bl'>
+                            <div>
                                 <span className='text-3xl text-center flex justify-center pb-5'>Le mie radici e il percorso formativo</span>
                                 <span className='text-md'>Sono nato in Egitto ma cresciuto in Italia, ho vissuto un'esperienza educativa che ha abbracciato due mondi. Ho completato
                                     il mio percorso scolastico qui in Italia, dalle elementari fino al diploma nel settore turistico. Tuttavia, come spesso accade nella vita,
@@ -72,7 +72,7 @@ function App() {
                             </div>
                         </div>
                         <div className='h-screen flex flex-col justify-center'>
-                            <div className='work__left-bl'>
+                            <div>
                                 <span className=' text-3xl text-center flex justify-center pb-5'>Le prime esperienze lavorative</span>
                                 <span className='text-md'>Il settore turistico, nonostante la mia formazione, non risuonava con le mie aspirazioni. Così, ho iniziato a esplorare diverse opportunità:
                                     <br />
@@ -82,7 +82,7 @@ function App() {
                             </div>
                         </div>
                         <div className='h-screen flex flex-col justify-center'>
-                            <div className='work__left-bl'>
+                            <div>
                                 <span className=' text-3xl text-center flex justify-center pb-5'>La scintilla che ha dato inizio al mio percorso</span>
                                 <span className='text-md'>Fu durante una riflessione sul mio percorso che un ricordo venne a galla. Mi tornò in mente un progetto scolastico in cui mi ero impegnato molto in <strong>HTML</strong> e <strong>CSS </strong>
                                     che mi aveva fatto guadagnare l'unico 10 in cinque anni di superiori. Quella scintilla di entusiasmo che avevo provato allora si riaccese, indicandomi la strada da seguire.</span>
@@ -93,7 +93,7 @@ function App() {
                                 animationData={fireWorksAnimation}
                                 className='fireworks'
                             />
-                            <div className='work__left-bl'>
+                            <div>
                                 <span className=' text-3xl text-center flex justify-center pb-5'>Il salto nel mondo dello sviluppo web</span>
                                 <span className='text-md z-40'>Così ho deciso di seguire questa nuova direzione, mi sono iscritto al corso di Boolean. È stato qui che ho realizzato che lo sviluppo web non era solo una nuova carriera,
                                     ma la realizzazione di un sogno che avevo da ragazzino, anche se solo ora ne ero pienamente consapevole.</span>

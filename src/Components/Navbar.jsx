@@ -28,9 +28,9 @@ function Navbar() {
                 document.getElementById('home'),
                 document.getElementById('biography'),
                 document.getElementById('projects')
-            ].filter(section => section !== null); // Filtra le sezioni che sono null
+            ].filter(section => section !== null);
     
-            if (sections.length === 0) return; // Se non ci sono sezioni, esci
+            if (sections.length === 0) return;
     
             const maxWidth = 411;
             const totalSections = sections.length;
@@ -73,7 +73,7 @@ function Navbar() {
                     <a href="/" className='mt-1'>
                         <img className={`min-w-40 max-w-40 lg:ml-20 transition-all duration-500  ${isScrolled ? 'max-w-32' : 'max-w-40'}`} src={logo} alt='logo' />
                     </a>
-                    <div className='relative flex flex-row items-center justify-center hidden md:flex'>
+                    <div className='relative flex-row items-center justify-center hidden md:flex'>
                         <Link to="/#home" className="group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:scale-125 transition-all duration-500">
                             Home
                             <span className=''></span>
