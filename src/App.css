@@ -233,5 +233,5 @@ section.sec::before{
   position: absolute;
   right: 6%;
   top: 90px;
-  transform: translateY(50%);
+  transform: translateY(250%);
 }

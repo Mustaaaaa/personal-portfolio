@@ -1,6 +1,6 @@
 import logo from '../Assets/MoustafaLogo.png';
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -8,13 +8,13 @@ import 'aos/dist/aos.css';
 function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
         AOS.init({
             duration: 1000,
         });
     }, []);
 
-    React.useEffect(() => {
+    useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10);
         };
@@ -22,7 +22,7 @@ function Navbar() {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-    React.useEffect(() => {
+    useEffect(() => {
         const handleScrollProgress = () => {
             const sections = [
                 document.getElementById('home'),

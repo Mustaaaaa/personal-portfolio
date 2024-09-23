@@ -1,6 +1,6 @@
 import '../../App.css';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -19,25 +19,27 @@ import imgLearnMorePageProjectChess from '../../Assets/chessacademy/learnmore.pn
 import imgDcComics from '../../Assets/dccomics&boolflix/dccomics.png';
 import imgBoolflix from '../../Assets/dccomics&boolflix/boolflix.png';
 function ProjectSection() {
+    useEffect(() => {
+        const lenis = new Lenis({
+            duration: 1.2,
+        });
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+    });
+
 
     gsap.registerPlugin(useGSAP);
     useGSAP(
         () => {
             gsap.registerPlugin(ScrollTrigger);
 
-            const lenis = new Lenis({
-                duration: 1.2,
-            });
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-            requestAnimationFrame(raf);
-            lenis.on('scroll', ScrollTrigger.update);
-            gsap.ticker.add((time) => {
-                lenis.raf(time * 1000);
-            });
-            
             const sections = gsap.utils.toArray(".panel");
 
             const horizontalScroll = gsap.to(sections, {
@@ -134,7 +136,7 @@ function ProjectSection() {
                     scrollTrigger: {
                         trigger: el.querySelector('.img-vertical-bottom-left'),
                         start: 'top bottom',
-                        end: '+=40%',
+                        end: '+=25%',
                         scrub: 0.5,
                     }
 
@@ -144,7 +146,7 @@ function ProjectSection() {
                     scrollTrigger: {
                         trigger: el.querySelector('.img-vertical-top-right'),
                         start: 'top bottom',
-                        end: '+=40%',
+                        end: '+=30%',
                         scrub: 0.5,
                     }
 
@@ -261,7 +263,7 @@ function ProjectSection() {
 
                 <section className='panel1 sec h-screen w-full flex justify-center items-center'>
                     <div className=" w-full bg-white z-10  mx-auto">
-                        <div className='max-w-[calc(1536px)] flex flex-col items-center lg:flex-row flex-grow'>
+                        <div className='flex flex-col items-center lg:flex-row'>
                             <div className=' w-full lg:w-2/6 flex flex-col px-5'>
                                 <p className='text-4xl md:text-7xl title-vertical'>Chess Academy</p>
                                 <p className='text-md py-5 text-pretty description-vertical'>Chess Academy è stato il progetto midterm presso Boolean, sviluppato interamente con Vue.js. Questa web app sfrutta le potenzialità di Vue.js per garantire un"esperienza utente fluida e reattiva. Il progetto dimostra le competenze acquisite nel front-end durante il corso.</p>

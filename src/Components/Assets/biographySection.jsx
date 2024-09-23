@@ -105,7 +105,7 @@ function App() {
 
                 <div className='w-[calc(46%)] h-auto'>
                     <div className='flex flex-col justify-center sticky w-[calc(100%)] h-screen top-0'>
-                        <div className='w-[calc(40vw)] h-[calc(70vh)] relative self-ed'>
+                        <div className='w-[calc(40vw)] h-[calc(70vh)] relative'>
                             <div className='absolute w-full h-full photo-animation flex justify-center background-orange'>
                                 <img src={imgPersonal} alt='imgDashboard' className='w-[calc(480px)] h-[calc(578px)] rounded-3xl' />
                             </div>
