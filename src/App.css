@@ -136,56 +136,56 @@ body{
   position: absolute;
   right: 16%;
   bottom: 125px;
-  transform: translate(50%);
+  transform: translateX(50%);
 }
 .title{
   width: 25%;
   position: absolute;
   top: 140px;
   left: 100px;
-  transform: translate(100%);
+  transform: translateX(100%);
 }
 .description-second{
   width: 30%;
   position: absolute;
   right: 16%;
   bottom: 125px;
-  transform: translate(50%);
+  transform: translateX(50%);
 }
 .title-second{
   width: 25%;
   position: absolute;
   top: 140px;
   left: 100px;
-  transform: translate(100%);
+  transform: translateX(100%);
 }
 .img-bottom-left{
   width: 40%;
   position: absolute;
   left: 100px;
   bottom: 90px;
-  transform: translate(75%);
+  transform: translateX(75%);
 }
 .img-top-right{
   width: 40%;
   position: absolute;
   right: 6%;
   top: 90px;
-  transform: translate(30%);
+  transform: translateX(30%);
 }
 .img-bottom-left-second{
   width: 40%;
   position: absolute;
   left: 100px;
   bottom: 90px;
-  transform: translate(75%);
+  transform: translateX(75%);
 }
 .img-top-right-second{
   width: 40%;
   position: absolute;
   right: 6%;
   top: 90px;
-  transform: translate(30%);
+  transform: translateX(30%);
 }
 
 section{
