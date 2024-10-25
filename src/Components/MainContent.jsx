@@ -6,8 +6,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/src/all';
 import Lenis from '@studio-freight/lenis';
 
-import ProjectSection from './Assets/ProjectSection'
-import BiographySection from './Assets/BiographySection'
+import ProjectSection from './Assets/ProjectSection';
+import BiographySection from './Assets/BiographySection';
 import HomeSection from './Assets/HomeSection';
 
 import AOS from 'aos';
