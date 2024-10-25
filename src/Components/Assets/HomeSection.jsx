@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import TypewriterComponent from 'typewriter-effect';
 
 import gsap from 'gsap';
