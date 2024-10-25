@@ -14,7 +14,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import imgPersonal from '../../Assets/abotMe/personalImage.png';
 import cv from '../../Assets/moustafa.ibrahim.121.pdf';
 
-import Stats from './Components/stats';
+import Stats from './Components/Stats';
 import AirplaneFlyButton from './Components/airplaneFlyButton';
 import TechnologiesBar from './Components/technologiesBar';
 
