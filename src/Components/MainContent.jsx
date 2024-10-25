@@ -8,7 +8,7 @@ import Lenis from '@studio-freight/lenis';
 
 import ProjectSection from './Assets/projectSection';
 import BiographySection from './Assets/biographySection';
-import HomeSection from './Assets/homeSection';
+import HomeSection from './Assets/HomeSection';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
