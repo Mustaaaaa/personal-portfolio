@@ -65,15 +65,17 @@ const HomeSection = () => {
                             />
                         </span>
                     </div>
-                    <div className='mt-10 flex flex-nowrap' data-aos="fade-up">
+                    <div className='mt-10 flex flex-nowrap justify-center items-center' data-aos="fade-up">
                         <div>
-                            <a href={cv} download="moustafa_ibrahim_cv.pdf" className='py-3 px-4 border-2 rounded-full border-orange-500 text-orange-500  hover:bg-orange-500 hover:text-white transition duration-300 mr-6'><FontAwesomeIcon icon={faDownload} /> DOWNLOAD CV</a>
+                            <a href={cv} download="moustafa_ibrahim_cv.pdf" className='text-lg h-14 w-44 border-2 flex justify-center items-center gap-2 rounded-full border-orange-500 text-orange-500  hover:bg-orange-500 hover:text-white transition duration-500 mr-6'><FontAwesomeIcon icon={faDownload} /> Scarica CV</a>
                         </div>
-                        <div>
-                            <a href='https://github.com/Mustaaaaa' className='py-3 px-4 border-2 rounded-full border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition duration-300 mr-4'><FontAwesomeIcon icon={faGithub} /></a>
+                        <div className='group'>
+                            <span className="absolute top-full left-[calc(59%)]  text-white bg-black rounded-md p-2 text-xs opacity-0 group-hover:opacity-100 duration-500">Github</span>
+                            <a href='https://github.com/Mustaaaaa' className='text-2xl border-2 h-12 w-12 flex justify-center items-center rounded-full border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition duration-500 mr-4'><FontAwesomeIcon icon={faGithub} /></a>
                         </div>
-                        <div>
-                            <a href='https://www.linkedin.com/in/moustafa-ibrahim-975962314/' className='py-3 px-4 border-2 rounded-full border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition duration-300 mr-4'><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                        <div className='group'>
+                            <span className="absolute top-full left-[calc(78%)]  text-white bg-black rounded-md p-2 text-xs opacity-0 group-hover:opacity-100 duration-500">Linkedin</span>
+                            <a href='https://www.linkedin.com/in/moustafa-ibrahim-975962314/' className='text-2xl border-2 h-12 w-12 flex justify-center items-center rounded-full border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition duration-500 mr-4'><FontAwesomeIcon icon={faLinkedinIn} /></a>
                         </div>
                     </div>
                 </div>
