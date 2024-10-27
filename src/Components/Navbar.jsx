@@ -1,6 +1,6 @@
 import logo from '../Assets/MoustafaLogo.png';
-import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -75,13 +75,13 @@ const Navbar = () => {
                     </a>
                     <div className='relative flex-row items-center justify-center hidden md:flex'>
                         <div id="progress-bar" className="rounded-md absolute top-[calc(58px)] left-0 h-[calc(5px)] background-orange "></div>
-                        <Link to="/#home" className="group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:scale-125 transition-all duration-500">
+                        <Link to="home" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:scale-125 transition-all duration-500">
                             Home
                         </Link>
-                        <Link to="/#biography" className="group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:scale-125 transition-all duration-500">
+                        <Link to="biography" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:scale-125 transition-all duration-500">
                             Biografia
                         </Link>
-                        <Link to="/#projects" className="group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:scale-125 transition-all duration-500">
+                        <Link to="projects" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:scale-125 transition-all duration-500">
                             Progetti
                         </Link>
                     </div>
