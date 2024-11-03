@@ -38,14 +38,14 @@ section {
   height: 100vh;
 }
 .fooder .cover {
-  background-image: url(./Assets/wordFooder.png);
+  background-image: url(./Assets/textCover/wordFooder.png);
 }
 
 .boolflix .cover {
-  background-image: url(./Assets/wordBoolflix.png);
+  background-image: url(./Assets/textCover/wordBoolflix.png);
 }
 .gamecreator .cover {
-  background-image: url(./Assets/wordGamecreator.png);
+  background-image: url(./Assets/textCover/wordGamecreator.png);
 }
 .transition .cover {
   transition: transform 1s ease, opacity 1s ease;
