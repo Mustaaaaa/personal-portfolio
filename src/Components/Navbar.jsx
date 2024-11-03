@@ -1,4 +1,4 @@
-import logo from '../Assets/MoustafaLogo.png';
+import logo from '../Assets/aboutMe/MoustafaLogo.png';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 
