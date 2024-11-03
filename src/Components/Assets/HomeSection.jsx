@@ -11,8 +11,8 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 
-import imgPersonal from '../../Assets/abotMe/personalImage.png';
-import cv from '../../Assets/moustafa.ibrahim.121.pdf';
+import imgPersonal from '../../Assets/aboutMe/personalImage.png';
+import cv from '../../Assets/aboutMe/moustafa.ibrahim.121.pdf';
 
 import Stats from './Components/Stats';
 import AirplaneFlyButton from './Components/AirplaneFlyButton';

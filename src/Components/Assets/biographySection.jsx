@@ -5,13 +5,13 @@ import { ScrollTrigger } from 'gsap/src/all';
 import '../../App.css';
 
 import Lottie from "lottie-react";
-import animation100 from '../../Assets/100animation.json';
-import fireWorksAnimation from '../../Assets/fireworks.json';
-import wavesAnimationOrange from '../../Assets/waves.json';
-import wavesAnimationBlue from '../../Assets/wavesBlue.json';
-import workAnimation from '../../Assets/workAnimation.json';
-import personalDiploma from '../../Assets/abotMe/diplomaa.jpg';
-import masterBoolean from '../../Assets/abotMe/masterboolean.png';
+
+import animation100 from '../../Assets/lottieflieasAnimation/100animation.json';
+import wavesAnimationOrange from '../../Assets/lottieflieasAnimation/waves.json';
+import wavesAnimationBlue from '../../Assets/lottieflieasAnimation/wavesBlue.json';
+import workAnimation from '../../Assets/lottieflieasAnimation/workAnimation.json';
+import personalDiploma from '../../Assets/aboutMe/diplomaa.jpg';
+import masterBoolean from '../../Assets/aboutMe/masterboolean.png';
 
 
 
