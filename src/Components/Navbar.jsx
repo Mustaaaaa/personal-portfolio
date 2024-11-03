@@ -67,34 +67,34 @@ const Navbar = () => {
 
 
     return (
-        <>
-            <nav className={`fixed z-50 w-full ${isScrolled ? 'flex items-center justify-center' : 'bg-white'}`} data-aos="fade-down">
-                <div className={`relative flex flex-row justify-between items-center h-16 transition-all duration-700 ease-in-out ${isScrolled ? 'bg-white shadow-lg rounded-full mt-3 pb-1 w-full scale-95' : 'bg-white scale-60'}`}>
-                    <a href="/" className='mt-1'>
-                        <img className={`min-w-40 max-w-40 lg:ml-20 transition-all duration-500  ${isScrolled ? 'max-w-32' : 'max-w-40'}`} src={logo} alt='logo' />
-                    </a>
-                    <div className='relative flex-row items-center justify-center hidden md:flex'>
-                        <div id="progress-bar" className="rounded-md absolute top-[calc(58px)] left-0 h-[calc(5px)] background-orange "></div>
-                        <Link to="home" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:scale-125 transition-all duration-500">
-                            Home
-                        </Link>
-                        <Link to="biography" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:scale-125 transition-all duration-500">
-                            Biografia
-                        </Link>
-                        <Link to="projects" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:scale-125 transition-all duration-500">
-                            Progetti
-                        </Link>
-                    </div>
-                    <div className='group transition mt-1'>
-                        <a href="https://moustafa-dev.com/contact-us"
-                            className='h-8 bg-orange-500 rounded-2xl px-6 flex justify-center items-center 
-                mr-10 hover:bg-gray-950 group-hover:text-white duration-500 animate-pulse'>
-                            Contattami
-                        </a>
-                    </div>
+
+        <nav className={`fixed z-50 w-full ${isScrolled ? 'flex items-center justify-center' : 'bg-white'}`} data-aos="fade-down">
+            <div className={`relative flex flex-row justify-between items-center h-16 transition-all duration-700 ease-in-out ${isScrolled ? 'bg-white shadow-lg rounded-full mt-3 pb-1 w-full scale-95' : 'bg-white scale-60'}`}>
+                <a href="/" className='mt-1'>
+                    <img className={`min-w-40 max-w-40 lg:ml-20 transition-all duration-500  ${isScrolled ? 'max-w-32' : 'max-w-40'}`} src={logo} alt='logo' />
+                </a>
+                <div className='relative flex-row items-center justify-center hidden md:flex'>
+                    <div id="progress-bar" className="rounded-md absolute top-[calc(58px)] left-0 h-[calc(5px)] background-orange "></div>
+                    <Link to="home" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:scale-125 transition-all duration-500 hover:cursor-pointer">
+                        Home
+                    </Link>
+                    <Link to="biography" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:scale-125 transition-all duration-500 hover:cursor-pointer">
+                        Biografia
+                    </Link>
+                    <Link to="projects" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center hover:text-orange-500 hover:scale-125 transition-all duration-500 hover:cursor-pointer">
+                        Progetti
+                    </Link>
                 </div>
-            </nav>
-        </>
+                <div className='group transition mt-1'>
+                    <a href="https://moustafa-dev.com/contact-us"
+                        className='h-8 bg-orange-500 rounded-2xl px-6 flex justify-center items-center 
+                mr-10 hover:bg-gray-950 group-hover:text-white duration-500 animate-pulse'>
+                        Contattami
+                    </a>
+                </div>
+            </div>
+        </nav>
+
     );
 }
 
