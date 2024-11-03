@@ -24,15 +24,15 @@ const HomeSection = () => {
     useGSAP(() => {
         let tl = gsap.timeline({
             scrollTrigger: {
-                trigger: '.bg',
+                trigger: '.clip-path-23',
                 pin: true,
                 start: 'top top',
-                end: '+=' + window.innerHeight * 1.2,
-                scrub: 0.3,
+                end: '+=' + window.innerHeight * 1.3,
+                scrub: 0.6,
             }
         })
 
-        tl.to('.bg', {
+        tl.to('.clip-path-23', {
             rotation: -360,
             xPercent: -110,
             yPercent: 25,
@@ -40,7 +40,7 @@ const HomeSection = () => {
             clipPath: 'circle(50% at 50% 50%)',
         })
 
-        tl.to('.bg', {
+        tl.to('.clip-path-23', {
             yPercent: 10,
         })
 
@@ -79,8 +79,8 @@ const HomeSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className="lg:w-3/6 w-2/4 flex justify-center items-center bg">
-                    <img src={imgPersonal} alt='imgDashboard' className='rounded-full  gradient-opacity max-h-[calc(400px)] ' />
+                <div className="lg:w-3/6 flex justify-center items-center clip-path-23 bg-orange-500 bg-no-repeat h-full top-0 right-0">
+                    <img src={imgPersonal} alt='imgDashboard' className='rounded-full ' />
                 </div>
             </div>
             <Stats />
