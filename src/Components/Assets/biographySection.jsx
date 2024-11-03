@@ -53,14 +53,14 @@ const BiographySection = () => {
 
 
     return (
-        <div className=' w-full'>
+        <div className='w-full'>
 
             <div className='rotate-[180deg] -[calc(100vh)] -mb-1'>
                 <Lottie
                     animationData={wavesAnimationOrange}
                 />
             </div>
-            <div ref={biographySectionRef} id="biography" className="flex justify-center background-orange w-full gallery">
+            <div ref={biographySectionRef} id="biography" className="flex justify-center bg-orange-500 w-full gallery">
                 <div className='flex max-w-[calc(1920px)]'>
 
                     <div className='w-[calc(46%)] h-auto'>
@@ -73,13 +73,13 @@ const BiographySection = () => {
                                     </div>
                                 </div>
 
-                                <div className='absolute w-[calc(480px)] h-full photo-animation background-brown rounded-3xl'>
+                                <div className='absolute w-[calc(480px)] h-[calc(740px)] photo-animation background-brown rounded-3xl'>
                                     <div className='h-full flex justify-center items-center'>
                                         <img src={personalDiploma} alt='imgDashboard' className='w-[calc(380px)] rounded-3xl shadow-xl' />
                                     </div>
                                 </div>
 
-                                <div className='absolute w-[calc(480px)] h-full photo-animation background-beige rounded-3xl'>
+                                <div className='absolute w-[calc(480px)] h-[calc(740px)] photo-animation background-beige rounded-3xl'>
                                     <div className='h-full flex justify-center items-center'>
                                         <Lottie
                                             animationData={workAnimation}
@@ -88,7 +88,7 @@ const BiographySection = () => {
                                     </div>
                                 </div>
 
-                                <div className='absolute w-[calc(480px)] h-full photo-animation background-gray rounded-3xl'>
+                                <div className='absolute w-[calc(480px)] h-[calc(740px)] photo-animation background-gray rounded-3xl'>
                                     <div className='h-full flex justify-center items-center'>
                                         <Lottie
                                             animationData={animation100}
@@ -97,7 +97,7 @@ const BiographySection = () => {
                                     </div>
                                 </div>
 
-                                <div className='absolute w-[calc(480px)] h-full photo-animation background-blue rounded-3xl'>
+                                <div className='absolute w-[calc(480px)] h-[calc(740px)] photo-animation background-blue rounded-3xl'>
                                     <div className='h-full flex justify-center items-center'>
                                         <img src={masterBoolean} alt='imgDashboard' className='w-[calc(380px)] rounded-3xl shadow-xl' />
                                     </div>
@@ -140,10 +140,6 @@ const BiographySection = () => {
                                 </div>
                             </div>
                             <div className='h-screen flex flex-col justify-center relative'>
-                                <Lottie
-                                    animationData={fireWorksAnimation}
-                                    className='fireworks'
-                                />
                                 <div>
                                     <span className=' text-3xl text-center flex justify-center pb-5'>Il salto nel mondo dello sviluppo web</span>
                                     <span className='text-md z-40'>Così ho deciso di seguire questa nuova direzione, mi sono iscritto al corso di Boolean. È stato qui che ho realizzato che lo sviluppo web non era solo una nuova carriera,
