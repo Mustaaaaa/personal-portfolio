@@ -88,11 +88,13 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className='group transition mt-1'>
-                    <a href="https://moustafa-dev.com/contact-us"
-                        className='h-8 bg-orange-500 rounded-2xl px-6 flex justify-center items-center 
-                mr-10 hover:bg-gray-950 group-hover:text-white duration-500 animate-pulse'>
-                        Contattami
-                    </a>
+                    <Link  to='contactMe' smooth={true} duration={1000}>
+                         <a href="https://moustafa-dev.com/contact-us"
+                            className='h-8 bg-orange-500 rounded-2xl px-6 flex justify-center items-center 
+                        mr-10 hover:bg-gray-950 group-hover:text-white duration-500 animate-pulse'>
+                            Contattami
+                        </a>
+                    </Link>
                 </div>
             </div>
         </nav>
