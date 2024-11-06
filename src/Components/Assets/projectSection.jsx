@@ -28,11 +28,17 @@ function ProjectSection() {
         const scrollContainer = e.currentTarget.querySelector('.overflow-y-scroll');
         if (scrollContainer) {
             scrollContainer.scrollBy({
-                top: e.deltaY * 3,
+                top: e.deltaY * 4,
                 behavior: 'smooth',
             });
         }
     };
+    
+    const handleNoScroll = (e) => {
+        alert('Chiudi la sezione con il pulsante in alto a sinistra per continuare a scrollare gli altri progetti!');
+        e.stopPropagation();
+    };
+    
     useEffect(() => {
         const sections = sectionsRef.current;
 
@@ -181,27 +187,30 @@ function ProjectSection() {
                         <button className='border-2 text-white px-8 py-2 rounded-full font-bold absolute bottom-28 left-1/2
                         transform -translate-x-1/2 transition-all duration-500 ease-in-out hover:bg-white hover:text-black'>About Fooder</button>
                     </div>
-                    <span className="close absolute top-28 right-28 z-20">
-                        <button className='border-2 border-black rounded-full w-12 h-12 text-3xl
-                         hover:border-orange-500 hover:text-orange-500 transition-all duration-300 ease-in-out'>X</button>
-                    </span>
                     <div>
                         <div className=' h-screen' onWheel={handleWheel}>
                             <div className="overflow-y-scroll h-full">
                                 <img src={imgDashboardFooderFrontend} className='images-transition pt-28 bg-yellow' alt="" />
                                 <h1 className='text-3xl pl-5 py-10 bg-yellow'>Scopri come funziona Fooder guardando questo video!</h1>
-                                <video src={vidFooderFrontend} controls className='images-transition'></video>
+                                <video src={vidFooderFrontend} autoPlay loop className='images-transition'></video>
                                 <h1 className='text-6xl pl-5 pb-10 pt-28 '>Fooder Buisness</h1>
                                 <img src={imgDashboardFooderBuisness} className='images-transition' alt="" />
                                 <img src={imgStatsFooderBuisness} className='images-transition' alt="" />
                             </div>
                         </div>
-                        <div className="text-animation absolute top-0 left-full w-1/2 h-full z-10 flex items-center bg-white">
+                        <div className="text-animation absolute top-0 left-full w-1/2 h-full z-10 flex items-center bg-white" onWheel={handleNoScroll}>
                             <div className="p-10 max-w-[calc(1000px)]">
                                 <h1 className='text-6xl pb-10'>Fooder</h1>
                                 <p className='text-xl'>Fooder è una web app per ordinare cibo a domicilio, sviluppata come progetto finale in team presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>.
                                     Il frontend è realizzato con Vue.js per un'interfaccia utente dinamica, mentre il backend utilizza Laravel per una gestione affidabile e sicura.
-                                    Questo progetto full-stack dimostra le competenze tecniche e pratiche acquisite durante lo svolgimento del corso.</p>
+                                    Questo progetto full-stack dimostra le competenze tecniche e pratiche acquisite durante lo svolgimento del corso.
+                                </p>
+
+                                <span className="close absolute top-28 right-28 z-20">
+                                    <button className='border-2 border-black rounded-full w-12 h-12 text-3xl
+                                 hover:border-orange-500 hover:text-orange-500 transition-all duration-300 ease-in-out'>X
+                                    </button>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -209,7 +218,7 @@ function ProjectSection() {
 
                 <section ref={el => sectionsRef.current[1] = el} className='project boolflix'>
                     <div className="cover  overflow-hidden absolute top-0 left-0 w-full h-full bg-cover bg-center p-28 z-30">
-                        <div className=" w-[calc(460px)] flex flex-row lg:mb-0 px-5 flex-wrap z-50">
+                    <div className=" w-[calc(460px)] flex flex-row lg:mb-0 px-5 flex-wrap z-50">
                             <a href="https://html.spec.whatwg.org/"
                                 className="p-3 border-800 hover:scale-150 duration-300 group">
                                 <span className="absolute top-full left-1/2 -translate-x-1/2 text-white bg-black rounded-md p-2 text-xs opacity-0 group-hover:opacity-100 duration-300">HTML</span>
@@ -265,22 +274,23 @@ function ProjectSection() {
                         <button className='border-2 text-white px-8 py-2 rounded-full font-bold absolute bottom-28 left-1/2
                         transform -translate-x-1/2 transition-all duration-500 ease-in-out hover:bg-white hover:text-black'>About Boolflix</button>
                     </div>
-                    <span className="close absolute top-28 right-28 z-20">
-                        <button className='border-2 border-black rounded-full w-12 h-12 text-3xl
-                         hover:border-orange-500 hover:text-orange-500 transition-all duration-300 ease-in-out'>X</button>
-                    </span>
                     <div>
                         <div className=' h-screen' onWheel={handleWheel}>
                             <div className="overflow-y-scroll h-full bg-black pb-28">
                                 <img src={imgDashboardBoolflix} className='images-transition pt-28 bg-black' alt="" />
                                 <h1 className='text-3xl pl-5 py-10 bg-black text-white'>Scopri come funziona Boolflix guardando questo video!</h1>
-                                <video src={vidBoolflix} controls className='images-transition'></video>
+                                <video src={vidBoolflix} autoPlay loop className='images-transition'></video>
                             </div>
                         </div>
-                        <div className="text-animation absolute top-0 left-full w-1/2 h-full z-10 flex items-center bg-white">
+                        <div className="text-animation absolute top-0 left-full w-1/2 h-full z-10 flex items-center bg-white" onWheel={handleNoScroll}>
                             <div className="p-10 max-w-[calc(1000px)]">
                                 <h1 className='text-6xl pb-10'>Boolflix</h1>
                                 <p className='text-xl'></p>
+
+                                <span className="close absolute top-28 right-28 z-20">
+                                    <button className='border-2 border-black rounded-full w-12 h-12 text-3xl
+                         hover:border-orange-500 hover:text-orange-500 transition-all duration-300 ease-in-out'>X</button>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -288,7 +298,7 @@ function ProjectSection() {
 
                 <section ref={el => sectionsRef.current[2] = el} className='project gamecreator'>
                     <div className="cover overflow-hidden absolute top-0 left-0 w-full h-full bg-cover bg-center p-28 z-30">
-                        <div className=" w-[calc(460px)] flex flex-row lg:mb-0 px-5 flex-wrap z-50">
+                    <div className=" w-[calc(460px)] flex flex-row lg:mb-0 px-5 flex-wrap z-50">
                             <a href="https://html.spec.whatwg.org/"
                                 className="p-3 border-800 hover:scale-150 duration-300 group">
                                 <span className="absolute top-full left-1/2 -translate-x-1/2 text-white bg-black rounded-md p-2 text-xs opacity-0 group-hover:opacity-100 duration-300">HTML</span>
@@ -332,10 +342,6 @@ function ProjectSection() {
                         <button className='border-2 text-black px-8 py-2 rounded-full font-bold absolute bottom-28 left-1/2
                         transform -translate-x-1/2 transition-all duration-500 ease-in-out hover:bg-black hover:text-white'>About GameCreator</button>
                     </div>
-                    <span className="close absolute top-28 right-28 z-20">
-                        <button className='border-2 border-black rounded-full w-12 h-12 text-3xl
-                         hover:border-orange-500 hover:text-orange-500 transition-all duration-300 ease-in-out'>X</button>
-                    </span>
                     <div>
                         <div className=' h-screen' onWheel={handleWheel}>
                             <div className="overflow-y-scroll h-full pb-28">
@@ -344,12 +350,17 @@ function ProjectSection() {
                                 <img src={imgGameCreatorItems} className='images-transition' alt="" />
                             </div>
                         </div>
-                        <div className="text-animation absolute top-0 left-full w-1/2 h-full z-10 flex items-center bg-white">
+                        <div className="text-animation absolute top-0 left-full w-1/2 h-full z-10 flex items-center bg-white" onWheel={handleNoScroll}>
                             <div className="p-10 max-w-[calc(1000px)]">
                                 <h1 className='text-6xl pb-10'>GameCreator</h1>
                                 <p className='text-xl'>GameCreator è una web app per la creazione di personaggi stile Dungeons & Dragons, sviluppata in team presso
                                     <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean utilizzando Laravel</a>.
                                     Questo progetto dimostra le competenze nel backend acquisite durante il corso, inclusa l'autenticazione degli utenti e la gestione dei dati di del personaggio creato o già esistente.</p>
+                                
+                                <span className="close absolute top-28 right-28 z-20">
+                                    <button className='border-2 border-black rounded-full w-12 h-12 text-3xl
+                         hover:border-orange-500 hover:text-orange-500 transition-all duration-300 ease-in-out'>X</button>
+                                </span>
                             </div>
                         </div>
                     </div>

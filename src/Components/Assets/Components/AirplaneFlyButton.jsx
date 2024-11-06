@@ -36,8 +36,12 @@ const AirplaneFlyButton = () => {
 
     }, []);
 
+    const handleNoScroll = (e) => {
+        e.stopPropagation();
+    };
+
     return (
-        <div className='lg:flex justify-center z-50 hidden'>
+        <div className='lg:flex justify-center z-50 hidden' onWheel={handleNoScroll}>
             {showButton && (
 
                 <div className="fixed bottom-0 -right-20 transform -translate-x-1/2  group  hover:scale-110 duration-500"

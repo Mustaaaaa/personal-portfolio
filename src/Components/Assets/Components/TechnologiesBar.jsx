@@ -19,8 +19,13 @@ const TechnologiesBar = () => {
 
 
     }, []);
+
+    const handleNoScroll = (e) => {
+        e.stopPropagation();
+    };
+
     return (
-        <div className='lg:flex justify-center z-50 hidden'>
+        <div className='lg:flex justify-center z-50 hidden' onWheel={handleNoScroll}>
             {showButton && (
                 <div data-aos="zoom-in-up"
                     className="fixed bg-white shadow-lg bottom-3 rounded-full flex flex-row justify-center lg:mb-0 px-5 flex-wra z-50">
