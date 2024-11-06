@@ -35,7 +35,7 @@ function ProjectSection() {
     };
     
     const handleNoScroll = (e) => {
-        alert('Chiudi la sezione con il pulsante in alto a sinistra per continuare a scrollare gli altri progetti!');
+        alert('Chiudi la sezione con il pulsante in alto a destra per continuare a scrollare gli altri progetti!');
         e.stopPropagation();
     };
     
@@ -66,7 +66,6 @@ function ProjectSection() {
             });
 
             close.addEventListener('click', () => {
-                document.body.style.overflow = 'auto';
                 section.classList.remove('animate-completed');
                 images.forEach(img => {
                     img.classList.remove('transition');
@@ -285,7 +284,7 @@ function ProjectSection() {
                         <div className="text-animation absolute top-0 left-full w-1/2 h-full z-10 flex items-center bg-white" onWheel={handleNoScroll}>
                             <div className="p-10 max-w-[calc(1000px)]">
                                 <h1 className='text-6xl pb-10'>Boolflix</h1>
-                                <p className='text-xl'></p>
+                                <p className='text-xl'>Boolflix è una web app simil Netflix per guardare film e serie tv creata con Vue.js, con una home dove sono presenti gli aggiunti di recente, una pagina per i film e una per le serie tv con anche la possibilità di cercare il titolo che si vuole.</p>
 
                                 <span className="close absolute top-28 right-28 z-20">
                                     <button className='border-2 border-black rounded-full w-12 h-12 text-3xl
