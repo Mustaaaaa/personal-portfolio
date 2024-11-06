@@ -7,7 +7,7 @@ const Footer = () => {
 
     return (
         <>
-            <section className=' h-screen'>
+            <section id='contactMe' className=' h-screen'>
                 <ContactForm />
             </section>
         </>
