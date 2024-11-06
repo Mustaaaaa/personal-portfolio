@@ -66,7 +66,7 @@ const BiographySection = () => {
                     <div className='w-[calc(46%)] h-auto'>
                         <div className='flex flex-col justify-center sticky w-full h-screen top-0'>
                             <div className='w-[calc(100%)] h-[calc(70vh)] relative flex justify-center items-center'>
-                                <div className='absolute w-[calc(480px)] h-full photo-animation background-orange rounded-3xl'>
+                                <div className='absolute w-[calc(482px)] h-[calc(742px)] photo-animation background-orange rounded-3xl'>
                                     <div className='h-full flex justify-center items-center'>
                                         <div className='w-[calc(380px)] rounded-3xl shadow-xl'>
                                         </div>
