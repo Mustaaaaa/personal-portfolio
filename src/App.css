@@ -31,8 +31,10 @@ body{
 .text-orange {
   color: #F97316;
 }
-.clip-path-23 {
-  clip-path: circle(23% at 50% 50%);
+@media (min-width: 1024px) {
+  .clip-path-23 {
+    clip-path: circle(23% at 50% 50%);
+  }
 }
 section {
   position: relative;
