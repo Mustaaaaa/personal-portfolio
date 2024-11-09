@@ -18,6 +18,8 @@ import imgGameCreatorHome from '../../Assets/gamecreator/home-gamecreator.png';
 import imgGameCreatorCharacter from '../../Assets/gamecreator/character-gamecreator.png';
 import imgGameCreatorItems from '../../Assets/gamecreator/items-gamecreator.png';
 
+import Lottie from "lottie-react";
+import scrollAnimation from '../../Assets/lottieflieasAnimation/scrollAnimation.json';
 
 
 function ProjectSection() {
@@ -33,12 +35,12 @@ function ProjectSection() {
             });
         }
     };
-    
+
     const handleNoScroll = (e) => {
         alert('Chiudi la sezione con il pulsante in alto a destra per continuare a scrollare gli altri progetti!');
         e.stopPropagation();
     };
-    
+
     useEffect(() => {
         const sections = sectionsRef.current;
 
@@ -52,10 +54,19 @@ function ProjectSection() {
             const button = section.querySelector('button');
             const close = section.querySelector('.close');
             const images = section.querySelectorAll('.images-transition');
+            const scrollHoverPanel = section.querySelector('.scroll-hover-panel');
 
             button.addEventListener('click', () => {
                 document.body.style.overflow = 'hidden';
                 section.classList.add('transition', 'animate');
+
+                setTimeout(() => {
+                    scrollHoverPanel.classList.remove('hidden');
+                    setTimeout(() => {
+                        scrollHoverPanel.classList.add('hidden');
+                    }, 5000);
+                }, 1000);
+
                 images.forEach(img => {
                     img.classList.add('transition');
                     img.style.width = '50%';
@@ -67,6 +78,8 @@ function ProjectSection() {
 
             close.addEventListener('click', () => {
                 section.classList.remove('animate-completed');
+                scrollHoverPanel.classList.add('hidden');
+
                 images.forEach(img => {
                     img.classList.remove('transition');
                     img.style.width = '';
@@ -188,7 +201,7 @@ function ProjectSection() {
                     </div>
                     <div>
                         <div className=' h-screen' onWheel={handleWheel}>
-                            <div className="overflow-y-scroll h-full">
+                            <div className="overflow-y-scroll h-full  pb-28">
                                 <img src={imgDashboardFooderFrontend} className='images-transition pt-28 bg-yellow' alt="" />
                                 <h1 className='text-3xl pl-5 py-10 bg-yellow'>Scopri come funziona Fooder guardando questo video!</h1>
                                 <video src={vidFooderFrontend} autoPlay loop className='images-transition'></video>
@@ -196,6 +209,14 @@ function ProjectSection() {
                                 <img src={imgDashboardFooderBuisness} className='images-transition' alt="" />
                                 <img src={imgStatsFooderBuisness} className='images-transition' alt="" />
                             </div>
+
+                            <div className='scroll-hover-panel w-1/2 absolute bg-opacity-50 top-0 left-0 bg-black z-10 h-screen flex justify-center hidden items-end'>
+                                <p className=' text-white opacity-100'><Lottie
+                                    animationData={scrollAnimation}
+                                    className='w-40'
+                                /></p>
+                            </div>
+
                         </div>
                         <div className="text-animation absolute top-0 left-full w-1/2 h-full z-10 flex items-center bg-white" onWheel={handleNoScroll}>
                             <div className="p-10 max-w-[calc(1000px)]">
@@ -217,7 +238,7 @@ function ProjectSection() {
 
                 <section ref={el => sectionsRef.current[1] = el} className='project boolflix'>
                     <div className="cover  overflow-hidden absolute top-0 left-0 w-full h-full bg-cover bg-center p-28 z-30">
-                    <div className=" w-[calc(460px)] flex flex-row lg:mb-0 px-5 flex-wrap z-50">
+                        <div className=" w-[calc(460px)] flex flex-row lg:mb-0 px-5 flex-wrap z-50">
                             <a href="https://html.spec.whatwg.org/"
                                 className="p-3 border-800 hover:scale-150 duration-300 group">
                                 <span className="absolute top-full left-1/2 -translate-x-1/2 text-white bg-black rounded-md p-2 text-xs opacity-0 group-hover:opacity-100 duration-300">HTML</span>
@@ -280,6 +301,12 @@ function ProjectSection() {
                                 <h1 className='text-3xl pl-5 py-10 bg-black text-white'>Scopri come funziona Boolflix guardando questo video!</h1>
                                 <video src={vidBoolflix} autoPlay loop className='images-transition'></video>
                             </div>
+                            <div className='scroll-hover-panel w-1/2 absolute bg-opacity-50 top-0 left-0 bg-black z-10 h-screen flex justify-center hidden items-end'>
+                                <p className=' text-white opacity-100'><Lottie
+                                    animationData={scrollAnimation}
+                                    className='w-40'
+                                /></p>
+                            </div>
                         </div>
                         <div className="text-animation absolute top-0 left-full w-1/2 h-full z-10 flex items-center bg-white" onWheel={handleNoScroll}>
                             <div className="p-10 max-w-[calc(1000px)]">
@@ -297,7 +324,7 @@ function ProjectSection() {
 
                 <section ref={el => sectionsRef.current[2] = el} className='project gamecreator'>
                     <div className="cover overflow-hidden absolute top-0 left-0 w-full h-full bg-cover bg-center p-28 z-30">
-                    <div className=" w-[calc(460px)] flex flex-row lg:mb-0 px-5 flex-wrap z-50">
+                        <div className=" w-[calc(460px)] flex flex-row lg:mb-0 px-5 flex-wrap z-50">
                             <a href="https://html.spec.whatwg.org/"
                                 className="p-3 border-800 hover:scale-150 duration-300 group">
                                 <span className="absolute top-full left-1/2 -translate-x-1/2 text-white bg-black rounded-md p-2 text-xs opacity-0 group-hover:opacity-100 duration-300">HTML</span>
@@ -348,6 +375,12 @@ function ProjectSection() {
                                 <img src={imgGameCreatorCharacter} className='images-transition' alt="" />
                                 <img src={imgGameCreatorItems} className='images-transition' alt="" />
                             </div>
+                            <div className='scroll-hover-panel w-1/2 absolute bg-opacity-50 top-0 left-0 bg-black z-10 h-screen flex justify-center hidden items-end'>
+                                <p className=' text-white opacity-100'><Lottie
+                                    animationData={scrollAnimation}
+                                    className='w-40'
+                                /></p>
+                            </div>
                         </div>
                         <div className="text-animation absolute top-0 left-full w-1/2 h-full z-10 flex items-center bg-white" onWheel={handleNoScroll}>
                             <div className="p-10 max-w-[calc(1000px)]">
@@ -355,7 +388,7 @@ function ProjectSection() {
                                 <p className='text-xl'>GameCreator è una web app per la creazione di personaggi stile Dungeons & Dragons, sviluppata in team presso
                                     <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean utilizzando Laravel</a>.
                                     Questo progetto dimostra le competenze nel backend acquisite durante il corso, inclusa l'autenticazione degli utenti e la gestione dei dati di del personaggio creato o già esistente.</p>
-                                
+
                                 <span className="close absolute top-28 right-28 z-20">
                                     <button className='border-2 border-black rounded-full w-12 h-12 text-3xl
                          hover:border-orange-500 hover:text-orange-500 transition-all duration-300 ease-in-out'>X</button>
