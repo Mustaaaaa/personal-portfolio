@@ -64,7 +64,7 @@ const BiographySection = () => {
                 />
             </div>
             <div ref={biographySectionRef} id="biography" className="hidden lg:flex justify-center bg-orange-500 w-full gallery">
-                <div className='flex max-w-[calc(1920px)]'>
+                <div className='flex lg:max-w-[calc(1920px)]'>
 
                     <div className='w-[calc(46%)] h-auto'>
                         <div className='flex flex-col justify-center sticky w-full h-screen top-0'>

@@ -100,21 +100,24 @@ function ProjectSection() {
     gsap.registerPlugin(useGSAP);
     useGSAP(
         () => {
-            gsap.registerPlugin(ScrollTrigger);
+            if (window.innerWidth >= 1024) {
 
-            let sections = gsap.utils.toArray(".project");
+                gsap.registerPlugin(ScrollTrigger);
 
-            gsap.to(sections, {
-                xPercent: -100 * (sections.length - 1),
-                ease: "none",
-                scrollTrigger: {
-                    trigger: ".horizontal-container",
-                    pin: true,
-                    scrub: true,
-                    snap: 1 / (sections.length - 1),
-                    end: () => "+=" + document.querySelector(".horizontal-container").offsetWidth
-                }
-            });
+                let sections = gsap.utils.toArray(".project");
+
+                gsap.to(sections, {
+                    xPercent: -100 * (sections.length - 1),
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".horizontal-container",
+                        pin: true,
+                        scrub: true,
+                        snap: 1 / (sections.length - 1),
+                        end: () => "+=" + document.querySelector(".horizontal-container").offsetWidth
+                    }
+                });
+            }
         },
         {}
     );
@@ -122,10 +125,10 @@ function ProjectSection() {
     return (
         <div id="projects" className='bg-white -mt-1'>
 
-            <div className='horizontal-container w-[calc(300%)] h-full flex flex-nowrap'>
+            <div className='horizontal-container lg:w-[calc(300%)] h-full flex flex-wrap lg:flex-nowrap'>
                 <section ref={el => sectionsRef.current[0] = el} className='project fooder'>
                     <div className="cover  overflow-hidden absolute top-0 left-0 w-full h-full bg-cover bg-center p-28 z-30">
-                        <div className=" w-[calc(600px)] flex flex-row lg:mb-0 px-5 flex-wrap z-50">
+                        <div className=" w-[calc(600px)] lg:flex flex-row lg:mb-0 px-5 flex-wrap z-50 hidden">
                             <a href="https://html.spec.whatwg.org/"
                                 className="p-3 border-800 hover:scale-150 duration-300 group">
                                 <span className="absolute top-full left-1/2 -translate-x-1/2 text-white bg-black rounded-md p-2 text-xs opacity-0 group-hover:opacity-100 duration-300">HTML</span>
@@ -238,7 +241,7 @@ function ProjectSection() {
 
                 <section ref={el => sectionsRef.current[1] = el} className='project boolflix'>
                     <div className="cover  overflow-hidden absolute top-0 left-0 w-full h-full bg-cover bg-center p-28 z-30">
-                        <div className=" w-[calc(460px)] flex flex-row lg:mb-0 px-5 flex-wrap z-50">
+                        <div className=" w-[calc(460px)] lg:flex flex-row lg:mb-0 px-5 flex-wrap z-50 hidden">
                             <a href="https://html.spec.whatwg.org/"
                                 className="p-3 border-800 hover:scale-150 duration-300 group">
                                 <span className="absolute top-full left-1/2 -translate-x-1/2 text-white bg-black rounded-md p-2 text-xs opacity-0 group-hover:opacity-100 duration-300">HTML</span>
@@ -324,7 +327,7 @@ function ProjectSection() {
 
                 <section ref={el => sectionsRef.current[2] = el} className='project gamecreator'>
                     <div className="cover overflow-hidden absolute top-0 left-0 w-full h-full bg-cover bg-center p-28 z-30">
-                        <div className=" w-[calc(460px)] flex flex-row lg:mb-0 px-5 flex-wrap z-50">
+                        <div className=" w-[calc(460px)] lg:flex flex-row lg:mb-0 px-5 flex-wrap z-50 hidden">
                             <a href="https://html.spec.whatwg.org/"
                                 className="p-3 border-800 hover:scale-150 duration-300 group">
                                 <span className="absolute top-full left-1/2 -translate-x-1/2 text-white bg-black rounded-md p-2 text-xs opacity-0 group-hover:opacity-100 duration-300">HTML</span>
