@@ -46,6 +46,22 @@ const HomeSection = () => {
             });
         }
     });
+    useGSAP(() => {
+        if (window.innerWidth <= 1024) {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '.clip-path-23',
+                    pin: true,
+                    start: 'top top',
+                    end: '+=' + window.innerHeight * 1,
+                    scrub: 0.6,
+                }
+            });
+            tl.to('.clip-path-23', {
+                yPercent: 50,
+            });
+        }
+    });
     return (
         <div className="flex w-full justify-center flex-col items-center">
 
@@ -80,7 +96,7 @@ const HomeSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className="mt-10 lg:my-0 lg:w-3/6 flex justify-center rounded-full h-60 w-60  items-center clip-path-23 bg-orange-500 bg-no-repeat lg:h-full top-0 right-0">
+                <div className="mt-14 lg:my-0 lg:w-3/6 flex justify-center rounded-full h-60 w-60  items-center clip-path-23 bg-orange-500 bg-no-repeat lg:h-full top-0 right-0">
                     <img src={imgPersonal} alt='imgDashboard' className='rounded-full w-5/6 lg:w-3/6 xl:w-2/6' />
                 </div>
             </div>
