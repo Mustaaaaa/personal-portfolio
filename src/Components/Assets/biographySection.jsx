@@ -164,7 +164,7 @@ const BiographySection = () => {
                                 <div className='h-screen flex justify-center items-center'>
                                     <div className='max-w-[calc(380px)] rounded-3xl shadow-xl'>
                                     </div>
-                                    <div className='p-10 pt-48'>
+                                    <div className='p-10'>
                                         <span className='text-3xl text-center flex justify-center pb-5'>Moustafa : Da Turismo a Web Developer</span>
                                         <span className='text-md'>Ciao! Sono <strong className="font-bold">Moustafa</strong>, ho 23 anni con origini egiziane e un cuore italiano. La mia storia è un intreccio di
                                             sfide e scoperte che mi hanno portato a trovare la mia vera passione: lo sviluppo web.</span>
