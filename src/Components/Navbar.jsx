@@ -70,7 +70,7 @@ const Navbar = () => {
 
     return (
 
-        <nav className={`fixed z-50 w-full ${isScrolled ? 'flex items-center justify-center' : 'bg-white'}`} data-aos="fade-down" onWheel={handleNoScroll}>
+        <nav className={`fixed z-50 w-screen ${isScrolled ? 'flex items-center justify-center' : 'bg-white'}`} data-aos="fade-down" onWheel={handleNoScroll}>
             <div className={`relative flex flex-row lg:justify-between items-center h-16 transition-all duration-700 ease-in-out ${isScrolled ? 'bg-white shadow-lg rounded-full mt-3 pb-1 w-full scale-95' : 'bg-white scale-60'}`}>
                 <a href="/" className='mt-1'>
                     <img className={`min-w-40 max-w-40 lg:ml-20 transition-all duration-500  ${isScrolled ? 'max-w-32' : 'max-w-40'}`} src={logo} alt='logo' />

@@ -228,7 +228,7 @@ function ProjectSection() {
                     </div>
                     <div className='flex flex-col'>
                         <div className=' h-screen' onWheel={handleWheel}>
-                            <div className="overflow-y-scroll lg:h-full h-1/2 w-full pb-28">
+                            <div className="overflow-y-scroll lg:h-full  w-full pb-28">
                                 <img src={imgDashboardFooderFrontend} className='images-transition pt-28 bg-yellow' alt="" />
                                 <h1 className='lg:text-3xl text-xl pl-5 py-10 bg-yellow'>Scopri come funziona Fooder guardando questo video!</h1>
                                 <video src={vidFooderFrontend} autoPlay loop className='images-transition'></video>
@@ -324,7 +324,7 @@ function ProjectSection() {
                     </div>
                     <div className='flex flex-col'>
                         <div className=' h-screen' onWheel={handleWheel}>
-                            <div className="overflow-y-scroll lg:h-full h-1/2 w-full bg-black pb-28">
+                            <div className="overflow-y-scroll lg:h-full  w-full bg-black pb-28">
                                 <img src={imgDashboardBoolflix} className='images-transition pt-28 bg-black' alt="" />
                                 <h1 className='lg:text-3xl text-xl pl-5 py-10 bg-black text-white'>Scopri come funziona Boolflix guardando questo video!</h1>
                                 <video src={vidBoolflix} autoPlay loop className='images-transition'></video>
@@ -399,7 +399,7 @@ function ProjectSection() {
                     </div>
                     <div className='flex flex-col'>
                         <div className=' h-screen' onWheel={handleWheel}>
-                            <div className="overflow-y-scroll lg:h-full h-1/2 w-full pb-28">
+                            <div className="overflow-y-scroll lg:h-full  w-full pb-28">
                                 <img src={imgGameCreatorHome} className='images-transition pt-28 bg-white' alt="" />
                                 <img src={imgGameCreatorCharacter} className='images-transition' alt="" />
                                 <img src={imgGameCreatorItems} className='images-transition' alt="" />
