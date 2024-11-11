@@ -3,9 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   overflow-x: hidden;
 }
+
 .background-orange {
   background-color: #F97316;
 }
@@ -25,22 +27,31 @@ body{
 .background-gray {
   background: linear-gradient(0deg, rgba(115, 116, 117, 1) 0%, rgba(255, 255, 255, 1) 75%);
 }
-.bg-yellow{
+
+.bg-yellow {
   background-color: #FDB721;
 }
+.bg-brown {
+  background-color: #6A4D1B;
+}
+
 .text-orange {
   color: #F97316;
 }
+
 @media (min-width: 1024px) {
   .clip-path-23 {
     clip-path: circle(23% at 50% 50%);
   }
+
 }
+
 section {
   position: relative;
   width: 100%;
   height: 100vh;
 }
+
 .fooder .cover {
   background-image: url(./Assets/textCover/wordFooder.png);
 }
@@ -48,28 +59,51 @@ section {
 .boolflix .cover {
   background-image: url(./Assets/textCover/wordBoolflix.png);
 }
+
 .gamecreator .cover {
   background-image: url(./Assets/textCover/wordGamecreator.png);
 }
+
 .transition .cover {
   transition: transform 1s ease, opacity 1s ease;
 }
+.transition-mobile .cover {
+  transition: transform 1s ease, opacity 1s ease;
+}
+
 .animate .cover {
   transform: scale(10);
   opacity: 0;
 }
-.transition .images-transition{
+.animate-mobile .cover {
+  transform: scale(10);
+  opacity: 0;
+}
+
+.transition .images-transition {
   transition: width 1s ease;
 }
-.images-transition{
+
+.images-transition {
   width: 100%;
 }
+
+.transition-mobile .text-animation {
+  transition: top 1s ease;
+}
+
+.animate-mobile .text-animation {
+  top: 50%;
+}
+
 .transition .text-animation {
   transition: left 1s ease;
 }
+
 .animate .text-animation {
   left: 50%;
 }
+
 .animate-completed .cover {
   display: none;
 }

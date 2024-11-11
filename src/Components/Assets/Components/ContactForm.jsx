@@ -90,7 +90,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div className='flex flex-col lg:flex-row justify-center items-center lg:h-full '>
+        <div className='flex flex-col lg:flex-row justify-center items-center lg:h-full bg-white '>
             <div className="flex flex-col h-[calc(80vh)] lg:h-auto justify-center items-center w-full mt-20 lg:mt-0 lg:items-end p-5 lg:w-1/2">
                 <form onSubmit={onSubmit} noValidate className=" bg-gray-50 shadow-2xl p-10 rounded-xl">
                     <h1 className="text-orange-500 text-2xl pb-10">Contattami!</h1>

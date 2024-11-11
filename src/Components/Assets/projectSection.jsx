@@ -56,42 +56,67 @@ function ProjectSection() {
             const images = section.querySelectorAll('.images-transition');
             const scrollHoverPanel = section.querySelector('.scroll-hover-panel');
 
-            button.addEventListener('click', () => {
-                document.body.style.overflow = 'hidden';
-                section.classList.add('transition', 'animate');
+            if (window.innerWidth >= 1024) {
+                button.addEventListener('click', () => {
+                    document.body.style.overflow = 'hidden';
+                    section.classList.add('transition', 'animate');
 
-                setTimeout(() => {
-                    scrollHoverPanel.classList.remove('hidden');
                     setTimeout(() => {
-                        scrollHoverPanel.classList.add('hidden');
-                    }, 5000);
-                }, 1000);
-
-                images.forEach(img => {
-                    img.classList.add('transition');
-                    img.style.width = '50%';
-                });
-                setTimeout(() => {
-                    section.classList.add('animate-completed');
-                }, 1000);
-            });
-
-            close.addEventListener('click', () => {
-                section.classList.remove('animate-completed');
-                scrollHoverPanel.classList.add('hidden');
-
-                images.forEach(img => {
-                    img.classList.remove('transition');
-                    img.style.width = '';
-                });
-                setTimeout(() => {
-                    section.classList.remove('animate');
-                    setTimeout(() => {
-                        resetAll();
+                        scrollHoverPanel.classList.remove('hidden');
+                        setTimeout(() => {
+                            scrollHoverPanel.classList.add('hidden');
+                        }, 5000);
                     }, 1000);
-                }, 100);
-            });
+
+                    images.forEach(img => {
+                        img.classList.add('transition');
+                        img.style.width = '50%';
+                    });
+                    setTimeout(() => {
+                        section.classList.add('animate-completed');
+                    }, 1000);
+                });
+
+            }
+            if (window.innerWidth < 1024) {
+                button.addEventListener('click', () => {
+                    document.body.style.overflow = 'hidden';
+                    section.classList.add('transition-mobile', 'animate-mobile');
+
+                    setTimeout(() => {
+                        scrollHoverPanel.classList.remove('hidden');
+                        setTimeout(() => {
+                            scrollHoverPanel.classList.add('hidden');
+                        }, 5000);
+                    }, 1000);
+
+                    images.forEach(img => {
+                        img.classList.add('transition');
+                        img.style.width = '100%';
+                    });
+                    setTimeout(() => {
+                        section.classList.add('animate-completed');
+                    }, 1000);
+                });
+
+            }
+                close.addEventListener('click', () => {
+                    section.classList.remove('animate-completed');
+                    scrollHoverPanel.classList.add('hidden');
+
+                    images.forEach(img => {
+                        img.classList.remove('transition', 'transition-mobile');
+                        img.style.width = '';
+                    });
+                    setTimeout(() => {
+                        section.classList.remove('animate', 'animate-mobile');
+                        setTimeout(() => {
+                            resetAll();
+                        }, 1000);
+                    }, 100);
+                });
         });
+
     }, []);
 
 
@@ -202,34 +227,35 @@ function ProjectSection() {
                         <button className='border-2 text-white px-8 py-2 rounded-full font-bold absolute bottom-28 left-1/2
                         transform -translate-x-1/2 transition-all duration-500 ease-in-out hover:bg-white hover:text-black'>About Fooder</button>
                     </div>
-                    <div>
+                    <div className='flex flex-col'>
                         <div className=' h-screen' onWheel={handleWheel}>
-                            <div className="overflow-y-scroll h-full  pb-28">
+                            <div className="overflow-y-scroll lg:h-full h-1/2 w-full pb-28">
                                 <img src={imgDashboardFooderFrontend} className='images-transition pt-28 bg-yellow' alt="" />
-                                <h1 className='text-3xl pl-5 py-10 bg-yellow'>Scopri come funziona Fooder guardando questo video!</h1>
+                                <h1 className='lg:text-3xl text-xl pl-5 py-10 bg-yellow'>Scopri come funziona Fooder guardando questo video!</h1>
                                 <video src={vidFooderFrontend} autoPlay loop className='images-transition'></video>
                                 <h1 className='text-6xl pl-5 pb-10 pt-28 '>Fooder Buisness</h1>
                                 <img src={imgDashboardFooderBuisness} className='images-transition' alt="" />
                                 <img src={imgStatsFooderBuisness} className='images-transition' alt="" />
                             </div>
 
-                            <div className='scroll-hover-panel w-1/2 absolute bg-opacity-50 top-0 left-0 bg-black z-10 h-screen flex justify-center hidden items-end'>
-                                <p className=' text-white opacity-100'><Lottie
+                            <div className='scroll-hover-panel lg:w-1/2 w-full absolute bg-opacity-50 top-0 left-0 bg-black z-10 lg:h-screen h-1/2 flex justify-center items-start  hidden lg:items-end'>
+                                <p className=' text-white opacity-100'>
+                                    <Lottie
                                     animationData={scrollAnimation}
-                                    className='w-40'
+                                    className='lg:w-28 w-10'
                                 /></p>
                             </div>
 
                         </div>
-                        <div className="text-animation absolute top-0 left-full w-1/2 h-full z-10 flex items-center bg-white" onWheel={handleNoScroll}>
+                        <div className="text-animation absolute top-full left-0 lg:left-full lg:top-0 lg:w-1/2 lg:h-full w-full h-1/2 z-0 flex items-center bg-white" onWheel={handleNoScroll}>
                             <div className="p-10 max-w-[calc(1000px)]">
-                                <h1 className='text-6xl pb-10'>Fooder</h1>
-                                <p className='text-xl'>Fooder è una web app per ordinare cibo a domicilio, sviluppata come progetto finale in team presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>.
+                                <h1 className='lg:text-6xl text-4xl pb-10'>Fooder</h1>
+                                <p className='lg:text-xl text-md'>Fooder è una web app per ordinare cibo a domicilio, sviluppata come progetto finale in team presso <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean</a>.
                                     Il frontend è realizzato con Vue.js per un'interfaccia utente dinamica, mentre il backend utilizza Laravel per una gestione affidabile e sicura.
                                     Questo progetto full-stack dimostra le competenze tecniche e pratiche acquisite durante lo svolgimento del corso.
                                 </p>
 
-                                <span className="close absolute top-28 right-28 z-20">
+                                <span className="close absolute lg:top-28 lg:right-28 top-10 right-10 z-20">
                                     <button className='border-2 border-black rounded-full w-12 h-12 text-3xl
                                  hover:border-orange-500 hover:text-orange-500 transition-all duration-300 ease-in-out'>X
                                     </button>
@@ -297,26 +323,27 @@ function ProjectSection() {
                         <button className='border-2 text-white px-8 py-2 rounded-full font-bold absolute bottom-28 left-1/2
                         transform -translate-x-1/2 transition-all duration-500 ease-in-out hover:bg-white hover:text-black'>About Boolflix</button>
                     </div>
-                    <div>
+                    <div className='flex flex-col'>
                         <div className=' h-screen' onWheel={handleWheel}>
-                            <div className="overflow-y-scroll h-full bg-black pb-28">
+                            <div className="overflow-y-scroll lg:h-full h-1/2 w-full bg-black pb-28">
                                 <img src={imgDashboardBoolflix} className='images-transition pt-28 bg-black' alt="" />
-                                <h1 className='text-3xl pl-5 py-10 bg-black text-white'>Scopri come funziona Boolflix guardando questo video!</h1>
+                                <h1 className='lg:text-3xl text-xl pl-5 py-10 bg-black text-white'>Scopri come funziona Boolflix guardando questo video!</h1>
                                 <video src={vidBoolflix} autoPlay loop className='images-transition'></video>
                             </div>
-                            <div className='scroll-hover-panel w-1/2 absolute bg-opacity-50 top-0 left-0 bg-black z-10 h-screen flex justify-center hidden items-end'>
-                                <p className=' text-white opacity-100'><Lottie
+                            <div className='scroll-hover-panel lg:w-1/2 w-full absolute bg-opacity-50 top-0 left-0 bg-black z-10 lg:h-screen h-1/2 flex justify-center items-start  hidden lg:items-end'>
+                                <p className=' text-white opacity-100'>
+                                    <Lottie
                                     animationData={scrollAnimation}
-                                    className='w-40'
+                                    className='lg:w-28 w-10'
                                 /></p>
                             </div>
                         </div>
-                        <div className="text-animation absolute top-0 left-full w-1/2 h-full z-10 flex items-center bg-white" onWheel={handleNoScroll}>
+                        <div className="text-animation absolute top-full left-0 lg:left-full lg:top-0 lg:w-1/2 lg:h-full w-full h-1/2 z-0 flex items-center bg-white" onWheel={handleNoScroll}>
                             <div className="p-10 max-w-[calc(1000px)]">
-                                <h1 className='text-6xl pb-10'>Boolflix</h1>
-                                <p className='text-xl'>Boolflix è una web app simil Netflix per guardare film e serie tv creata con Vue.js, con una home dove sono presenti gli aggiunti di recente, una pagina per i film e una per le serie tv con anche la possibilità di cercare il titolo che si vuole.</p>
+                                <h1 className='lg:text-6xl text-4xl pb-10'>Boolflix</h1>
+                                <p className='text-md lg:text-xl'>Boolflix è una web app simil Netflix per guardare film e serie tv creata con Vue.js, con una home dove sono presenti gli aggiunti di recente, una pagina per i film e una per le serie tv con anche la possibilità di cercare il titolo che si vuole.</p>
 
-                                <span className="close absolute top-28 right-28 z-20">
+                                <span className="close absolute lg:top-28 lg:right-28 top-10 right-10 z-20">
                                     <button className='border-2 border-black rounded-full w-12 h-12 text-3xl
                          hover:border-orange-500 hover:text-orange-500 transition-all duration-300 ease-in-out'>X</button>
                                 </span>
@@ -371,28 +398,29 @@ function ProjectSection() {
                         <button className='border-2 text-black px-8 py-2 rounded-full font-bold absolute bottom-28 left-1/2
                         transform -translate-x-1/2 transition-all duration-500 ease-in-out hover:bg-black hover:text-white'>About GameCreator</button>
                     </div>
-                    <div>
+                    <div className='flex flex-col'>
                         <div className=' h-screen' onWheel={handleWheel}>
-                            <div className="overflow-y-scroll h-full pb-28">
+                            <div className="overflow-y-scroll lg:h-full h-1/2 w-full pb-28">
                                 <img src={imgGameCreatorHome} className='images-transition pt-28 bg-white' alt="" />
                                 <img src={imgGameCreatorCharacter} className='images-transition' alt="" />
                                 <img src={imgGameCreatorItems} className='images-transition' alt="" />
                             </div>
-                            <div className='scroll-hover-panel w-1/2 absolute bg-opacity-50 top-0 left-0 bg-black z-10 h-screen flex justify-center hidden items-end'>
-                                <p className=' text-white opacity-100'><Lottie
+                            <div className='scroll-hover-panel lg:w-1/2 w-full absolute bg-opacity-50 top-0 left-0 bg-black z-10 lg:h-screen h-1/2 flex justify-center items-start  hidden lg:items-end'>
+                                <p className=' text-white opacity-100'>
+                                    <Lottie
                                     animationData={scrollAnimation}
-                                    className='w-40'
+                                    className='lg:w-28 w-10'
                                 /></p>
                             </div>
                         </div>
-                        <div className="text-animation absolute top-0 left-full w-1/2 h-full z-10 flex items-center bg-white" onWheel={handleNoScroll}>
+                        <div className="text-animation absolute top-full left-0 lg:left-full lg:top-0 lg:w-1/2 lg:h-full w-full h-1/2 z-0 flex items-center bg-white" >
                             <div className="p-10 max-w-[calc(1000px)]">
-                                <h1 className='text-6xl pb-10'>GameCreator</h1>
-                                <p className='text-xl'>GameCreator è una web app per la creazione di personaggi stile Dungeons & Dragons, sviluppata in team presso
+                                <h1 className='lg:text-6xl text-4xl pb-10'>GameCreator</h1>
+                                <p className='lg:text-xl text-md'>GameCreator è una web app per la creazione di personaggi stile Dungeons & Dragons, sviluppata in team presso
                                     <a href="https://boolean.careers/" className='hover:text-blue-500 underline visited:text-purple-600'>Boolean utilizzando Laravel</a>.
                                     Questo progetto dimostra le competenze nel backend acquisite durante il corso, inclusa l'autenticazione degli utenti e la gestione dei dati di del personaggio creato o già esistente.</p>
 
-                                <span className="close absolute top-28 right-28 z-20">
+                                <span className="close absolute lg:top-28 lg:right-28 top-10 right-10 z-20">
                                     <button className='border-2 border-black rounded-full w-12 h-12 text-3xl
                          hover:border-orange-500 hover:text-orange-500 transition-all duration-300 ease-in-out'>X</button>
                                 </span>

@@ -110,23 +110,23 @@ const BiographySection = () => {
                     </div>
                     <div className='relative w-[calc(54%)] top-0'>
                         <div className='ml w-[calc(100%)]'>
-                            <div className='h-screen flex flex-col justify-center'>
-                                <div>
+                            <div className='h-screen flex flex-col justify-center lg:items-center xl:items-start'>
+                                <div className='w-2/3'>
                                     <span className='text-3xl text-center flex justify-center pb-5'>Moustafa : Da Turismo a Web Developer</span>
                                     <span className='text-md'>Ciao! Sono <strong className="font-bold">Moustafa</strong>, ho 23 anni con origini egiziane e un cuore italiano. La mia storia è un intreccio di
                                         sfide e scoperte che mi hanno portato a trovare la mia vera passione: lo sviluppo web.</span>
                                 </div>
                             </div>
-                            <div className='h-screen flex flex-col justify-center'>
-                                <div>
+                            <div className='h-screen flex flex-col justify-center lg:items-center xl:items-start'>
+                                <div className='w-2/3'>
                                     <span className='text-3xl text-center flex justify-center pb-5'>Le mie radici e il percorso formativo</span>
                                     <span className='text-md'>Sono nato in Egitto ma cresciuto in Italia, ho vissuto un'esperienza educativa che ha abbracciato due mondi. Ho completato
                                         il mio percorso scolastico qui in Italia, dalle elementari fino al diploma nel settore turistico. Tuttavia, come spesso accade nella vita,
                                         ciò che studiamo non sempre riflette ciò che siamo destinati a diventare.</span>
                                 </div>
                             </div>
-                            <div className='h-screen flex flex-col justify-center'>
-                                <div>
+                            <div className='h-screen flex flex-col justify-center lg:items-center xl:items-start'>
+                                <div className='w-2/3'>
                                     <span className=' text-3xl text-center flex justify-center pb-5'>Le prime esperienze lavorative</span>
                                     <span className='text-md'>Il settore turistico, nonostante la mia formazione, non risuonava con le mie aspirazioni. Così, ho iniziato a esplorare diverse opportunità:
                                         <br />
@@ -135,15 +135,15 @@ const BiographySection = () => {
                                         <strong>2) Magazziniere</strong>: Un ruolo che mi ha permesso di crescere rapidamente, diventando capoturno in soli 12 mesi. Eppure, sentivo che mancava qualcosa...</span>
                                 </div>
                             </div>
-                            <div className='h-screen flex flex-col justify-center'>
-                                <div>
+                            <div className='h-screen flex flex-col justify-center lg:items-center xl:items-start'>
+                                <div className='w-1/2'>
                                     <span className=' text-3xl text-center flex justify-center pb-5'>La scintilla che ha dato inizio al mio percorso</span>
                                     <span className='text-md'>Fu durante una riflessione sul mio percorso che un ricordo venne a galla. Mi tornò in mente un progetto scolastico in cui mi ero impegnato molto in <strong>HTML</strong> e <strong>CSS </strong>
                                         che mi aveva fatto guadagnare l'unico 10 in cinque anni di superiori. Quella scintilla di entusiasmo che avevo provato allora si riaccese, indicandomi la strada da seguire.</span>
                                 </div>
                             </div>
-                            <div className='h-screen flex flex-col justify-center relative'>
-                                <div>
+                            <div className='h-screen flex flex-col justify-center lg:items-center xl:items-start'>
+                                <div className='w-2/3'>
                                     <span className=' text-3xl text-center flex justify-center pb-5'>Il salto nel mondo dello sviluppo web</span>
                                     <span className='text-md z-40'>Così ho deciso di seguire questa nuova direzione, mi sono iscritto al corso di Boolean. È stato qui che ho realizzato che lo sviluppo web non era solo una nuova carriera,
                                         ma la realizzazione di un sogno che avevo da ragazzino, anche se solo ora ne ero pienamente consapevole.</span>
@@ -187,7 +187,7 @@ const BiographySection = () => {
                                     <div className='flex justify-center '>
                                         <Lottie
                                             animationData={workAnimation}
-                                            className='w-1/2 sm:w-2/3 rounded-xl shadow-xl'
+                                            className='w-1/2 sm:w-2/3 rounded-xl'
                                         />
                                     </div>
                                     <div className='p-10'>
@@ -204,7 +204,7 @@ const BiographySection = () => {
                                     <div className='flex justify-center '>
                                         <Lottie
                                             animationData={animation100}
-                                            className='w-1/2 sm:w-2/3 rounded-xl shadow-xl'
+                                            className='w-1/2 sm:w-2/3 rounded-xl'
                                         />
                                     </div>
                                     <div className='p-10'>
@@ -216,7 +216,7 @@ const BiographySection = () => {
 
                                 <div className='h-screen flex flex-col justify-center items-center'>
                                     <div className='flex justify-center '>
-                                        <img src={masterBoolean} alt='imgDashboard' className='w-1/2 sm:w-2/3 rounded-xl shadow-xl' />
+                                        <img src={masterBoolean} alt='imgDashboard' className='w-1/2 sm:w-1/3 rounded-xl shadow-xl' />
                                     </div>
                                     <div className='p-10'>
                                         <span className=' text-3xl text-center flex justify-center pb-5'>Il salto nel mondo dello sviluppo web</span>
@@ -235,7 +235,11 @@ const BiographySection = () => {
             <div>
                 <Lottie
                     animationData={wavesAnimationBlue}
-                    className='rotate-[180deg] -mt-1'
+                    className='rotate-[180deg] -mt-1 hidden lg:block'
+                />
+                <Lottie
+                    animationData={wavesAnimationOrange}
+                    className='rotate-[360deg] -mt-1 lg:hidden bg-brown'
                 />
             </div>
         </div>
