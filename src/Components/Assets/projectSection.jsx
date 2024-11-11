@@ -80,7 +80,6 @@ function ProjectSection() {
             }
             if (window.innerWidth < 1024) {
                 button.addEventListener('click', () => {
-                    document.body.style.overflow = 'hidden';
                     section.classList.add('transition-mobile', 'animate-mobile');
 
                     setTimeout(() => {
@@ -91,8 +90,8 @@ function ProjectSection() {
                     }, 1000);
 
                     images.forEach(img => {
-                        img.classList.add('transition');
-                        img.style.width = '100%';
+                        img.classList.add('transition-mobile');
+                        img.style.height = '50%';
                     });
                     setTimeout(() => {
                         section.classList.add('animate-completed');
