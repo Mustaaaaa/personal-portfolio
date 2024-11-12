@@ -69,7 +69,6 @@ function ProjectSection() {
                             scrollHoverPanel.classList.add('hidden');
                         }, 5000);
                     }, 1000);
-
                     images.forEach(img => {
                         img.classList.add('transition');
                         img.style.width = '50%';
@@ -92,7 +91,6 @@ function ProjectSection() {
                             scrollHoverPanel.classList.add('hidden');
                         }, 5000);
                     }, 1000);
-                  
                     setTimeout(() => {
                         section.classList.add('animate-completed');
                     }, 1000);
@@ -151,7 +149,7 @@ function ProjectSection() {
 
             <div className='horizontal-container lg:w-[calc(300%)] h-full flex flex-wrap lg:flex-nowrap'>
                 <section ref={el => sectionsRef.current[0] = el} className='project fooder'>
-                    <div className="cover  overflow-hidden absolute top-0 left-0 w-full h-full bg-cover bg-center p-28 z-30">
+                    <div className="cover cover-mobile cover-tablet overflow-hidden absolute top-0 left-0 w-full h-full bg-cover bg-center p-28 z-30">
                         <div className=" w-[calc(600px)] lg:flex flex-row lg:mb-0 px-5 flex-wrap z-50 hidden">
                             <a href="https://html.spec.whatwg.org/"
                                 className="p-3 border-800 hover:scale-150 duration-300 group">
@@ -265,7 +263,7 @@ function ProjectSection() {
                 </section>
 
                 <section ref={el => sectionsRef.current[1] = el} className='project boolflix'>
-                    <div className="cover  overflow-hidden absolute top-0 left-0 w-full h-full bg-cover bg-center p-28 z-30">
+                    <div className="cover cover-mobile cover-tablet overflow-hidden absolute top-0 left-0 w-full h-full bg-cover bg-center p-28 z-30">
                         <div className=" w-[calc(460px)] lg:flex flex-row lg:mb-0 px-5 flex-wrap z-50 hidden">
                             <a href="https://html.spec.whatwg.org/"
                                 className="p-3 border-800 hover:scale-150 duration-300 group">
@@ -352,7 +350,7 @@ function ProjectSection() {
                 </section>
 
                 <section ref={el => sectionsRef.current[2] = el} className='project gamecreator'>
-                    <div className="cover overflow-hidden absolute top-0 left-0 w-full h-full bg-cover bg-center p-28 z-30">
+                    <div className="cover cover-mobile cover-tablet overflow-hidden absolute top-0 left-0 w-full h-full bg-cover bg-center p-28 z-30">
                         <div className=" w-[calc(460px)] lg:flex flex-row lg:mb-0 px-5 flex-wrap z-50 hidden">
                             <a href="https://html.spec.whatwg.org/"
                                 className="p-3 border-800 hover:scale-150 duration-300 group">

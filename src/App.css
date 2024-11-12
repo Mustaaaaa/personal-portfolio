@@ -44,6 +44,45 @@ body {
     clip-path: circle(23% at 50% 50%);
   }
 
+
+  .fooder .cover {
+    background-image: url(./Assets/textCover/wordFooder.png);
+  }
+  .boolflix .cover {
+    background-image: url(./Assets/textCover/wordBoolflix.png);
+  }
+  .gamecreator .cover {
+    background-image: url(./Assets/textCover/wordGamecreator.png);
+  }
+  
+}
+@media (min-width: 641px) {
+  .fooder .cover-tablet {
+    background-image: url(./Assets/textCover/wordFooderTablet.png);
+    background-color:white;
+  }
+  .boolflix .cover-tablet {
+    background-image: url(./Assets/textCover/wordBoolflixTablet.png);
+    background-color:white;
+  }
+  .gamecreator .cover-tablet {
+    background-image: url(./Assets/textCover/wordGamecreatorTablet.png);
+    background-color:black;
+  }
+}
+@media (max-width: 640px) {
+  .fooder .cover-mobile {
+    background-image: url(./Assets/textCover/wordFooderMobile.png);
+    background-color:white;
+  }
+  .boolflix .cover-mobile {
+    background-image: url(./Assets/textCover/wordBoolflixMobile.png);
+    background-color:white;
+  }
+  .gamecreator .cover-mobile {
+    background-image: url(./Assets/textCover/wordGamecreatorMobile.png);
+    background-color:black;
+  }
 }
 
 section {
@@ -52,17 +91,8 @@ section {
   height: 100vh;
 }
 
-.fooder .cover {
-  background-image: url(./Assets/textCover/wordFooder.png);
-}
 
-.boolflix .cover {
-  background-image: url(./Assets/textCover/wordBoolflix.png);
-}
 
-.gamecreator .cover {
-  background-image: url(./Assets/textCover/wordGamecreator.png);
-}
 
 .transition .cover {
   transition: transform 1s ease, opacity 1s ease;
