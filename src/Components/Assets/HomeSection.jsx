@@ -48,9 +48,9 @@ const HomeSection = () => {
     });
 
     return (
-        <div className="flex w-full justify-center flex-col items-center">
+        <div id='home' className="flex w-full justify-center flex-col items-center">
 
-            <div className="md:h-[calc(90vh)] h-[calc(80vh - 64px)] lg:max-w-[calc(1920px)] w-full z-10  flex lg:flex-row flex-col-reverse items-center justify-center">
+            <div className="md:h-[calc(90vh)] h-[calc(80vh - 64px)] md:pt-0 pt-16 lg:max-w-[calc(1920px)] w-full z-10  flex lg:flex-row flex-col-reverse items-center justify-center">
                 <div className="lg:w-3/6 w-full flex flex-col items-center lg:items-start lg:pl-[calc(15%)]">
                     <p data-aos="fade-down-right" className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl">Moustafa</p>
                     <p data-aos="fade-up-left" className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl xl:pl-64 lg:pl-44">Ibrahim</p>

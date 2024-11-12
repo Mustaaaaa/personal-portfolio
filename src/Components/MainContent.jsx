@@ -36,7 +36,7 @@ const MainContent = () => {
 
     return (
 
-        <div id="home" className="w-full">
+        <div className="w-full">
             <HomeSection />
             <BiographySection />
             <ProjectSection />
