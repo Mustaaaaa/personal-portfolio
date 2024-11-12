@@ -81,8 +81,6 @@ function ProjectSection() {
             }
             if (window.innerWidth < 1024) {
                 button.addEventListener('click', () => {
-                    document.body.style.overflow = 'hidden';
-
                     section.classList.add('transition-mobile', 'animate-mobile');
 
                     setTimeout(() => {
