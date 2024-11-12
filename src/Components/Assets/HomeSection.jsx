@@ -32,18 +32,24 @@ const HomeSection = () => {
                     scrub: 0.6,
                 }
             });
-    
+
             tl.to('.clip-path-23', {
                 rotation: -360,
-                xPercent: -110,
+                xPercent: -111,
                 yPercent: 25,
                 backgroundColor: 'transparent',
                 clipPath: 'circle(50% at 50% 50%)',
             });
-    
+
             tl.to('.clip-path-23', {
-                yPercent: 10,
+                yPercent: 7,
             });
+            if (window.innerHeight >= 1081) {
+
+                tl.to('.clip-path-23', {
+                    yPercent: 20,
+                });
+            }
         }
     });
 
@@ -85,7 +91,7 @@ const HomeSection = () => {
                     <img src={imgPersonal} alt='imgDashboard' className='rounded-full w-5/6 lg:w-3/6 xl:w-2/6' />
                 </div>
             </div>
-                
+
             <Stats />
             <AirplaneFlyButton />
             <TechnologiesBar />

@@ -67,7 +67,7 @@ function ProjectSection() {
                         scrollHoverPanel.classList.remove('hidden');
                         setTimeout(() => {
                             scrollHoverPanel.classList.add('hidden');
-                        }, 5000);
+                        }, 3000);
                     }, 1000);
                     images.forEach(img => {
                         img.classList.add('transition');
@@ -87,7 +87,7 @@ function ProjectSection() {
                         scrollHoverPanel.classList.remove('hidden');
                         setTimeout(() => {
                             scrollHoverPanel.classList.add('hidden');
-                        }, 5000);
+                        }, 3000);
                     }, 1000);
                     setTimeout(() => {
                         section.classList.add('animate-completed');
@@ -408,7 +408,7 @@ function ProjectSection() {
                                     /></p>
                             </div>
                         </div>
-                        <div className="text-animation absolute top-full left-0 lg:left-full lg:top-0 lg:w-1/2 lg:h-full w-full h-1/2 z-0 flex items-center bg-white" >
+                        <div className="text-animation absolute top-full left-0 lg:left-full lg:top-0 lg:w-1/2 lg:h-full w-full h-1/2 z-0 flex items-center bg-white" onWheel={handleNoScroll}>
                             <div className="p-10 max-w-[calc(1000px)]">
                                 <h1 className='lg:text-6xl text-4xl pb-10'>GameCreator</h1>
                                 <p className='lg:text-xl text-md'>GameCreator è una web app per la creazione di personaggi stile Dungeons & Dragons, sviluppata in team presso

@@ -68,41 +68,41 @@ const BiographySection = () => {
 
                     <div className='w-[calc(46%)] h-auto'>
                         <div className='flex flex-col justify-center sticky w-full h-screen top-0'>
-                            <div className='w-[calc(100%)] h-[calc(70vh)] relative flex justify-center items-center'>
-                                <div className='absolute w-[calc(482px)] h-[calc(742px)] photo-animation background-orange rounded-3xl'>
+                            <div className='w-[calc(80%)] h-[calc(80vh)] relative flex justify-center items-center'>
+                                <div className='absolute w-[calc(82%)] h-[calc(92%)] max-w-[calc(482px)] max-h-[calc(742px)] photo-animation background-orange rounded-3xl'>
                                     <div className='h-full flex justify-center items-center'>
-                                        <div className='w-[calc(380px)] rounded-3xl shadow-xl'>
+                                        <div className='w-[calc(85%)] rounded-3xl shadow-xl'>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className='absolute w-[calc(480px)] h-[calc(740px)] photo-animation background-brown rounded-3xl'>
+                                <div className='absolute w-[calc(80%)] h-[calc(90%)] max-w-[calc(480px)] max-h-[calc(740px)] photo-animation background-brown rounded-3xl'>
                                     <div className='h-full flex justify-center items-center'>
-                                        <img src={personalDiploma} alt='imgDashboard' className='w-[calc(380px)] rounded-3xl shadow-xl' />
+                                        <img src={personalDiploma} alt='imgDashboard' className='w-[calc(80%)] rounded-3xl shadow-xl' />
                                     </div>
                                 </div>
 
-                                <div className='absolute w-[calc(480px)] h-[calc(740px)] photo-animation background-beige rounded-3xl'>
+                                <div className='absolute w-[calc(80%)] h-[calc(90%)] max-w-[calc(480px)] max-h-[calc(740px)] photo-animation background-beige rounded-3xl'>
                                     <div className='h-full flex justify-center items-center'>
                                         <Lottie
                                             animationData={workAnimation}
-                                            className='w-[calc(380px)] rounded-3xl shadow-xl'
+                                            className='w-[calc(80%)] rounded-3xl shadow-xl'
                                         />
                                     </div>
                                 </div>
 
-                                <div className='absolute w-[calc(480px)] h-[calc(740px)] photo-animation background-gray rounded-3xl'>
+                                <div className='absolute w-[calc(80%)] h-[calc(90%)] max-w-[calc(480px)] max-h-[calc(740px)] photo-animation background-gray rounded-3xl'>
                                     <div className='h-full flex justify-center items-center'>
                                         <Lottie
                                             animationData={animation100}
-                                            className='w-[calc(380px)] rounded-3xl shadow-xl'
+                                            className='w-[calc(80%)] rounded-3xl shadow-xl'
                                         />
                                     </div>
                                 </div>
 
-                                <div className='absolute w-[calc(480px)] h-[calc(740px)] photo-animation background-blue rounded-3xl'>
+                                <div className='absolute w-[calc(80%)] h-[calc(90%)] max-w-[calc(480px)] max-h-[calc(740px)] photo-animation background-blue rounded-3xl'>
                                     <div className='h-full flex justify-center items-center'>
-                                        <img src={masterBoolean} alt='imgDashboard' className='w-[calc(380px)] rounded-3xl shadow-xl' />
+                                        <img src={masterBoolean} alt='imgDashboard' className='w-[calc(80%)] rounded-3xl shadow-xl' />
                                     </div>
                                 </div>
                             </div>
