@@ -37,8 +37,10 @@ function ProjectSection() {
     };
 
     const handleNoScroll = (e) => {
-        alert('Chiudi la sezione con il pulsante in alto a destra per continuare a scrollare gli altri progetti!');
-        e.stopPropagation();
+        if (window.innerWidth >= 1024) {
+            alert('Chiudi la sezione con il pulsante in alto a destra per continuare a scrollare gli altri progetti!');
+            e.stopPropagation();
+        }
     };
 
     useEffect(() => {
@@ -80,6 +82,8 @@ function ProjectSection() {
             }
             if (window.innerWidth < 1024) {
                 button.addEventListener('click', () => {
+                    document.body.style.overflow = 'hidden';
+
                     section.classList.add('transition-mobile', 'animate-mobile');
 
                     setTimeout(() => {
@@ -88,32 +92,28 @@ function ProjectSection() {
                             scrollHoverPanel.classList.add('hidden');
                         }, 5000);
                     }, 1000);
-
-                    images.forEach(img => {
-                        img.classList.add('transition-mobile');
-                        img.style.height = '50%';
-                    });
+                  
                     setTimeout(() => {
                         section.classList.add('animate-completed');
                     }, 1000);
                 });
 
             }
-                close.addEventListener('click', () => {
-                    section.classList.remove('animate-completed');
-                    scrollHoverPanel.classList.add('hidden');
+            close.addEventListener('click', () => {
+                section.classList.remove('animate-completed');
+                scrollHoverPanel.classList.add('hidden');
 
-                    images.forEach(img => {
-                        img.classList.remove('transition', 'transition-mobile');
-                        img.style.width = '';
-                    });
-                    setTimeout(() => {
-                        section.classList.remove('animate', 'animate-mobile');
-                        setTimeout(() => {
-                            resetAll();
-                        }, 1000);
-                    }, 100);
+                images.forEach(img => {
+                    img.classList.remove('transition', 'transition-mobile');
+                    img.style.width = '';
                 });
+                setTimeout(() => {
+                    section.classList.remove('animate', 'animate-mobile');
+                    setTimeout(() => {
+                        resetAll();
+                    }, 1000);
+                }, 100);
+            });
         });
 
     }, []);
@@ -228,7 +228,7 @@ function ProjectSection() {
                     </div>
                     <div className='flex flex-col'>
                         <div className=' h-screen' onWheel={handleWheel}>
-                            <div className="overflow-y-scroll lg:h-full  w-full pb-28">
+                            <div className="overflow-y-scroll lg:h-full h-1/2 w-full pb-28">
                                 <img src={imgDashboardFooderFrontend} className='images-transition pt-28 bg-yellow' alt="" />
                                 <h1 className='lg:text-3xl text-xl pl-5 py-10 bg-yellow'>Scopri come funziona Fooder guardando questo video!</h1>
                                 <video src={vidFooderFrontend} autoPlay loop className='images-transition'></video>
@@ -240,9 +240,9 @@ function ProjectSection() {
                             <div className='scroll-hover-panel lg:w-1/2 w-full absolute bg-opacity-50 top-0 left-0 bg-black z-10 lg:h-screen h-1/2 flex justify-center items-start  hidden lg:items-end'>
                                 <p className=' text-white opacity-100'>
                                     <Lottie
-                                    animationData={scrollAnimation}
-                                    className='lg:w-28 w-10'
-                                /></p>
+                                        animationData={scrollAnimation}
+                                        className='lg:w-28 w-10'
+                                    /></p>
                             </div>
 
                         </div>
@@ -324,7 +324,7 @@ function ProjectSection() {
                     </div>
                     <div className='flex flex-col'>
                         <div className=' h-screen' onWheel={handleWheel}>
-                            <div className="overflow-y-scroll lg:h-full  w-full bg-black pb-28">
+                            <div className="overflow-y-scroll lg:h-full h-1/2 w-full bg-black pb-28">
                                 <img src={imgDashboardBoolflix} className='images-transition pt-28 bg-black' alt="" />
                                 <h1 className='lg:text-3xl text-xl pl-5 py-10 bg-black text-white'>Scopri come funziona Boolflix guardando questo video!</h1>
                                 <video src={vidBoolflix} autoPlay loop className='images-transition'></video>
@@ -332,9 +332,9 @@ function ProjectSection() {
                             <div className='scroll-hover-panel lg:w-1/2 w-full absolute bg-opacity-50 top-0 left-0 bg-black z-10 lg:h-screen h-1/2 flex justify-center items-start  hidden lg:items-end'>
                                 <p className=' text-white opacity-100'>
                                     <Lottie
-                                    animationData={scrollAnimation}
-                                    className='lg:w-28 w-10'
-                                /></p>
+                                        animationData={scrollAnimation}
+                                        className='lg:w-28 w-10'
+                                    /></p>
                             </div>
                         </div>
                         <div className="text-animation absolute top-full left-0 lg:left-full lg:top-0 lg:w-1/2 lg:h-full w-full h-1/2 z-0 flex items-center bg-white" onWheel={handleNoScroll}>
@@ -399,7 +399,7 @@ function ProjectSection() {
                     </div>
                     <div className='flex flex-col'>
                         <div className=' h-screen' onWheel={handleWheel}>
-                            <div className="overflow-y-scroll lg:h-full  w-full pb-28">
+                            <div className="overflow-y-scroll lg:h-full h-1/2 w-full pb-28">
                                 <img src={imgGameCreatorHome} className='images-transition pt-28 bg-white' alt="" />
                                 <img src={imgGameCreatorCharacter} className='images-transition' alt="" />
                                 <img src={imgGameCreatorItems} className='images-transition' alt="" />
@@ -407,9 +407,9 @@ function ProjectSection() {
                             <div className='scroll-hover-panel lg:w-1/2 w-full absolute bg-opacity-50 top-0 left-0 bg-black z-10 lg:h-screen h-1/2 flex justify-center items-start  hidden lg:items-end'>
                                 <p className=' text-white opacity-100'>
                                     <Lottie
-                                    animationData={scrollAnimation}
-                                    className='lg:w-28 w-10'
-                                /></p>
+                                        animationData={scrollAnimation}
+                                        className='lg:w-28 w-10'
+                                    /></p>
                             </div>
                         </div>
                         <div className="text-animation absolute top-full left-0 lg:left-full lg:top-0 lg:w-1/2 lg:h-full w-full h-1/2 z-0 flex items-center bg-white" >
