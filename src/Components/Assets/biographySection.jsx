@@ -136,7 +136,7 @@ const BiographySection = () => {
                                 </div>
                             </div>
                             <div className='h-screen flex flex-col justify-center lg:items-center xl:items-start'>
-                                <div className='w-1/2'>
+                                <div className='w-2/3'>
                                     <span className=' text-3xl text-center flex justify-center pb-5'>La scintilla che ha dato inizio al mio percorso</span>
                                     <span className='text-md'>Fu durante una riflessione sul mio percorso che un ricordo venne a galla. Mi tornò in mente un progetto scolastico in cui mi ero impegnato molto in <strong>HTML</strong> e <strong>CSS </strong>
                                         che mi aveva fatto guadagnare l'unico 10 in cinque anni di superiori. Quella scintilla di entusiasmo che avevo provato allora si riaccese, indicandomi la strada da seguire.</span>
