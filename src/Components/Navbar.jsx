@@ -106,7 +106,7 @@ const Navbar = () => {
                     <Link to='contactMe' smooth={true} duration={1000}>
                         <a href="https://moustafa-dev.com/contact-us"
                             className='h-8 bg-orange-500 rounded-2xl px-6 flex justify-center items-center 
-                        mr-10 hover:bg-gray-950 group-hover:text-white duration-500 animate-pulse'>
+                        mr-10 hover:bg-gray-950 group-hover:text-white duration-500 animate-pulse lg:mr-20'>
                             Contattami
                         </a>
                     </Link>
