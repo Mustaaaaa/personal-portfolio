@@ -226,7 +226,7 @@ function ProjectSection() {
                         <div className=' h-screen' onWheel={handleWheel}>
                             <div className="overflow-y-scroll lg:h-full h-1/2 w-full pb-28">
                                 <img src={imgDashboardFooderFrontend} className='images-transition pt-28 bg-yellow' alt="" />
-                                <h1 className='lg:text-3xl text-xl pl-5 py-10 bg-yellow md:w-1/2'>Scopri come funziona Fooder guardando questo video!</h1>
+                                <h1 className='lg:text-3xl text-xl pl-5 py-10 bg-yellow lg:w-1/2'>Scopri come funziona Fooder guardando questo video!</h1>
                                 <video src={vidFooderFrontend} autoPlay loop className='images-transition'></video>
                                 <h1 className='text-6xl pl-5 pb-10 pt-28 '>Fooder Buisness</h1>
                                 <img src={imgDashboardFooderBuisness} className='images-transition' alt="" />
@@ -322,7 +322,7 @@ function ProjectSection() {
                         <div className=' h-screen' onWheel={handleWheel}>
                             <div className="overflow-y-scroll lg:h-full h-1/2 w-full bg-black pb-28">
                                 <img src={imgDashboardBoolflix} className='images-transition pt-28 bg-black' alt="" />
-                                <h1 className='lg:text-3xl text-xl pl-5 py-10 bg-black text-white md:w-1/2'>Scopri come funziona Boolflix guardando questo video!</h1>
+                                <h1 className='lg:text-3xl text-xl pl-5 py-10 bg-black text-white lg:w-1/2'>Scopri come funziona Boolflix guardando questo video!</h1>
                                 <video src={vidBoolflix} autoPlay loop className='images-transition'></video>
                             </div>
                             <div className='scroll-hover-panel lg:w-1/2 w-full absolute bg-opacity-50 top-0 left-0 bg-black z-10 lg:h-screen h-1/2 flex justify-center items-start  hidden lg:items-end'>
