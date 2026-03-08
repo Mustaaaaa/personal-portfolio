@@ -15,7 +15,6 @@ import imgPersonal from '../../Assets/aboutMe/personalImage.png';
 import cv from '../../Assets/aboutMe/CV_Ibrahim_Moustafa.pdf';
 
 import Stats from './Components/Stats';
-import AirplaneFlyButton from './Components/AirplaneFlyButton';
 import TechnologiesBar from './Components/TechnologiesBar';
 
 const HomeSection = () => {
@@ -93,7 +92,6 @@ const HomeSection = () => {
             </div>
 
             <Stats />
-            <AirplaneFlyButton />
             <TechnologiesBar />
         </div>
     )
