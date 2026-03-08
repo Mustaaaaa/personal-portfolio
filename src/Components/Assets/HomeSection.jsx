@@ -88,7 +88,7 @@ const HomeSection = () => {
                     </div>
                 </div>
                 <div className="mt-10 lg:mt-0 lg:w-3/6 flex justify-center rounded-full h-60 w-60  items-center clip-path-23 bg-orange-500 bg-no-repeat lg:h-full top-0 right-0">
-                    <img src={imgPersonal} alt='imgDashboard' className='rounded-full w-5/6 lg:w-3/6 xl:w-2/6' />
+                    <img src={imgPersonal} alt='imgDashboard' className='rounded-full w-5/6 lg:w-3/6 xl:w-2/6 drop-shadow' />
                 </div>
             </div>
 

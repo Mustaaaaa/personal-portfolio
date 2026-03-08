@@ -78,7 +78,7 @@ const BiographySection = () => {
 
                                 <div className='absolute w-[calc(80%)] h-[calc(90%)] max-w-[calc(480px)] max-h-[calc(740px)] photo-animation background-brown rounded-3xl'>
                                     <div className='h-full flex justify-center items-center'>
-                                        <img src={personalDiploma} alt='imgDashboard' className='w-[calc(80%)] rounded-3xl shadow-xl' />
+                                        <img src={personalDiploma} alt='imgDashboard' className='w-[calc(80%)] rounded-3xl drop-shadow-work-animation' />
                                     </div>
                                 </div>
 
@@ -86,7 +86,7 @@ const BiographySection = () => {
                                     <div className='h-full flex justify-center items-center'>
                                         <Lottie
                                             animationData={workAnimation}
-                                            className='w-[calc(80%)] rounded-3xl shadow-xl'
+                                            className='w-[calc(80%)] rounded-3xl drop-shadow'
                                         />
                                     </div>
                                 </div>
@@ -95,14 +95,14 @@ const BiographySection = () => {
                                     <div className='h-full flex justify-center items-center'>
                                         <Lottie
                                             animationData={animation100}
-                                            className='w-[calc(80%)] rounded-3xl shadow-xl'
+                                            className='w-[calc(80%)] rounded-3xl drop-shadow'
                                         />
                                     </div>
                                 </div>
 
                                 <div className='absolute w-[calc(80%)] h-[calc(90%)] max-w-[calc(480px)] max-h-[calc(740px)] photo-animation background-blue rounded-3xl'>
                                     <div className='h-full flex justify-center items-center'>
-                                        <img src={masterBoolean} alt='imgDashboard' className='w-[calc(80%)] rounded-3xl shadow-xl' />
+                                        <img src={masterBoolean} alt='imgDashboard' className='w-[calc(80%)] rounded-3xl drop-shadow-work-animation' />
                                     </div>
                                 </div>
                             </div>

@@ -20,6 +20,10 @@ body {
   background: linear-gradient(0deg, rgba(117, 79, 7, 1) 0%, rgba(213, 171, 92, 1) 75%);
 }
 
+.drop-shadow {
+  filter: drop-shadow(20px 7px 5px rgba(0, 0, 0, 0.514));
+}
+
 .background-blue {
   background: linear-gradient(0deg, rgba(2, 21, 51, 1) 0%, rgba(5, 75, 185, 1) 75%);
 }
